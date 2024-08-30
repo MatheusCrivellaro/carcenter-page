@@ -1,0 +1,27 @@
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    background-color: rgba(223, 171, 33, 0.2);
+    color: white;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transition: 0.05s;
+}
+
+.pagination-button.active {
+    background-color: #dfab21;
+    transform: scale(1.1);
+}
+
+.pagination-button:hover {
+    background-color: rgba(223, 171, 33, 0.6);
+    transform: scale(1.1);
+}

@@ -1,0 +1,16 @@
+.spinner-estoque-carros-div {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-estoque-carros {
+    width: 200px;
+    height: 200px;
+    font-size: 40px;
+    color: #dfab21;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,107 @@
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: #212121;
+    z-index: 99;
+    height: 80px;
+}
+
+.nav-container {
+    position: relative;
+}
+
+.div-horarios-nav {
+    height: 100%;
+    background: #424242;
+    color: #979797;
+    padding: 6px 24px;
+    display: flex;
+    justify-content: end;
+    font-size: 16px;
+}
+
+.div-horarios-nav span {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.suspense-nav {
+    position: fixed;
+    top:0
+}
+
+.title-div-nav {
+    display: flex;
+    align-items: center;
+    padding: 6px 24px;
+    height: 100%;
+}
+
+.title-div-nav img {
+    height: max-content;
+}
+
+.optionals-div-nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 24px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 48px 0 0;
+}
+
+.active-button-nav {
+    border: #EBCA6A 1px solid;
+    background-color: #212121;
+    color: #dfab21;
+    transition: 0.2s;
+}
+
+.active-button-nav:hover {
+    text-shadow: rgba(223, 171, 33, 0.8) 0 0 10px;
+    box-shadow: rgba(223, 171, 33, 0.6) 0 0 10px;
+}
+
+.deactivated-button-nav {
+    background-color: rgba(0,0,0,0);
+    color: #9B9B9B;
+    border: 1px solid rgba(0,0,0,0);
+    transition: 0.2s;
+}
+
+.deactivated-button-nav:hover {
+    text-shadow: rgba(255,255,255, 0.8) 0 0 10px;
+}
+
+.button-nav {
+    border-radius: 4px;
+    padding: 4px 12px;
+    margin: 0 0 0 24px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.whatsapp-button-nav {
+    border: 0;
+    background-color: #26A95F;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin: 4px 8px 4px 24px;
+}
+
+.text-whatsapp-button-nav {
+    color: #FAFAFA;
+    font-size: 14px;
+    margin: 0;
+}
+
+.icon-wpp-nav {
+    color: #FAFAFA;
+    margin: 0 4px;
+}

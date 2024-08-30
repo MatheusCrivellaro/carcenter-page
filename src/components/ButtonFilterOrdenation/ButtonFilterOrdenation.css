@@ -1,0 +1,55 @@
+.button-ordenar-informations-list-veiculos {
+    height: min-content;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background: #282833;
+    color: #fafafa;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.button-ordenar-informations-list-veiculos:hover {
+    background: #3F3F50;
+}
+
+.button-ordenar-menu-informations-list-veiculos {
+    width: max-content;
+    background: #282833;
+}
+
+.button-ordenar-menu-informations-list-veiculos a{
+    color: #fafafa;
+}
+
+.button-ordenar {
+    border: 0;
+    border-radius: 8px;
+    padding: 4px 24px;
+    color: #FAFAFA;
+    font-weight: 500;
+    background-color: #282833;
+    width: 100%;
+    margin-top: 12px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.button-ordenar:hover {
+    background-color: #3F3F50;
+}
+
+.button-ordenar-menu {
+    width: 100%;
+    background: #282833;
+}
+
+.button-ordenar-menu a {
+    color: #FAFAFA;
+}
+
+.button-filter-ordenation {
+    width: 100%;
+}

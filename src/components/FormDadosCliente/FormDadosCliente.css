@@ -1,0 +1,124 @@
+
+.venda-form-input-div {
+    color: #121217;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-venda-dados {
+    margin-bottom: 24px;
+}
+
+.input-venda-dados p {
+    color: #6C6C89;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.input-venda-nome {
+    margin-bottom: 24px;
+}
+
+.input-venda-phone {
+    margin-bottom: 24px;
+}
+
+.input-venda-email {
+    margin-bottom: 24px;
+}
+
+.check-input-phone-div {
+    display: flex;
+    align-items: center;
+}
+
+.check-input-phone-div p {
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.check-input-phone-div input[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fafafa;
+    margin-right: 12px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.check-input-phone-div input[type="checkbox"]:checked {
+    background: #fafafa;
+    width: 15px;
+    height: 15px;
+}
+
+.content-input-venda {
+    display: flex;
+    margin: 8px 0;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #4f4f63;
+    background: #282833;
+    width: 100%;
+    transition: 0.1s;
+}
+
+.content-input-venda:hover {
+    border: 1px solid #71718a;
+}
+
+.input-venda-form-item {
+    border: none;
+    background: #282833;
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    color: #fafafa;
+}
+
+.input-venda-form-item::placeholder {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.input-venda-form-item:focus {
+    outline: none;
+}
+
+.icon-input-venda {
+    color: #71718a;
+    font-size: 22px;
+    margin: 0 8px;
+}
+
+.button-submit-form-venda {
+    margin-top: 12px;
+    border: none;
+    background: #282833;
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 8px;
+    padding:12px 24px;
+    transition: 0.2s;
+}
+
+.button-submit-form-venda:hover {
+    background: #3F3F50;
+}
+
+.icon-button-submit-form-venda {
+    font-size: 24px;
+    margin-left: 2px;
+}
+
+.content-button-submit-form-venda {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}

@@ -1,0 +1,108 @@
+.venda {
+    padding: 48px 64px;
+}
+
+.venda-container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 45% 45%;
+    gap: 48px;
+}
+
+.venda-form {
+    padding: 24px 0 24px 48px;
+}
+
+.venda-form h3 {
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.venda-form-title {
+    margin-bottom: 48px;
+}
+
+.venda-form h1 {
+    color: #fafafa;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.venda-form h2 {
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.venda-como-funciona {
+    width: 100%;
+    padding: 0 48px;
+}
+
+.venda-como-funciona-title {
+    color: #fafafa;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 48px;
+}
+
+.container-img-passo-venda img {
+    width: 180px;
+    height: 180px;
+    margin-right: 24px;
+    border-radius: 8px;
+}
+
+.container-img-passo-venda {
+    display: flex;
+    width: 100%;
+}
+
+.container-img-passo-venda h1 {
+    color: #fafafa;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.container-img-passo-venda p {
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.container-text-passo-venda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-img-passo-venda-contrario {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin: 24px 0;
+}
+
+.container-img-passo-venda-contrario h1 {
+    color: #fafafa;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.container-img-passo-venda-contrario p {
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.container-img-passo-venda-contrario img {
+    width: 180px;
+    height: 180px;
+    margin-left: 24px;
+    border-radius: 8px;
+}

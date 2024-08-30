@@ -1,0 +1,15 @@
+.card-instituicao-financeira {
+
+}
+
+.card-instituicao-financeira img {
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.card-instituicao-financeira h3 {
+    color: #fafafa;
+    font-size: 14px;
+    font-weight: 700;
+}

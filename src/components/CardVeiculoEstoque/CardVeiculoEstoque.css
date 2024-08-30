@@ -1,0 +1,105 @@
+.card-veiculo-estoque {
+    background-color: #282833;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0 0 20px;
+    transition: 0.4s;
+}
+
+.div-container-carousel-categorias-card-veiculo {
+    border-radius: 8px;
+}
+
+.div-informations-card-estoque {
+    padding: 0 16px 16px;
+}
+
+.card-veiculo-div-estoque {
+    padding: 16px;
+}
+
+.card-veiculo-estoque h4 {
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.img-padrao-card {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-veiculo-estoque h4 span {
+    color: #fafafa;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.card-veiculo-estoque h2 {
+    font-weight: normal;
+    font-size: 12px;
+    color: #fafafa;
+    margin-bottom: 12px;
+}
+
+.card-veiculo-estoque h3 {
+    font-weight: normal;
+    font-size: 14px;
+    color: #fafafa;
+    margin-bottom: 12px;
+}
+
+.card-veiculo-estoque h3 span {
+    font-weight: 700;
+    font-size: 16px;
+    color: #fafafa;
+}
+
+.ano-km-div-card-veiculo-estoque {
+    display: flex;
+    justify-content: space-between;
+    color: #fafafa;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.ano-km-div-card-veiculo-estoque p {
+    display: flex;
+}
+
+.icon-card-veiculos-estoque {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.button-card-veiculos-estoque {
+    border: none;
+    width: 100%;
+    text-align: center;
+    padding: 4px;
+    background: #4f4f63;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #FAFAFA;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.2s;
+}
+
+.button-card-veiculos-estoque:hover {
+    background: #3F3F50;
+}
+
+.img-logo-card-veiculo {
+    padding: 2px 0;
+    margin: 2px 0;
+    width: auto;
+    height: 25px;
+}
+
+

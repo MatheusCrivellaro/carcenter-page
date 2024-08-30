@@ -1,0 +1,38 @@
+.formConcluido {
+    width: 100%;
+    height: 90vh;
+    padding: 48px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.formConcluido h1 {
+    color: #fafafa;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.formConcluido h2 {
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.formConcluido button {
+    background-color: #dfab21;
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    margin-top: 48px;
+    border-radius: 8px;
+    padding: 8px 24px;
+    transition: 0.2s;
+}
+
+.formConcluido button:hover {
+    background: #C28800;
+}

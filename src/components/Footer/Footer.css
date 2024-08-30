@@ -1,0 +1,133 @@
+footer {
+    padding: 48px 40px 24px;
+    background: #212121;
+    border-top: 4px solid #EBCA6A;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    grid-template-rows: 100%;
+}
+
+footer h1 {
+    color: #FAFAFA;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer h2, h3 {
+    color: #FAFAFA;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer img {
+    width: auto;
+    height: 50px;
+}
+
+.footer-option {
+    color: #FAFAFA;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.footer-options-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.icon-redes-footer {
+    color: #FAFAFA;
+    font-size: 20px;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+.localizacao-div-inicio {
+    padding: 24px 48px 64px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #121217;
+}
+
+@media (min-width: 1600px) {
+    .localizacao-div-inicio {
+        padding: 24px 192px 64px 192px;
+    }
+}
+
+.mapa-div-localizacao-inicio h1 {
+    color: #fafafa;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.mapa-div-localizacao-inicio {
+    margin-right: 48px;
+}
+
+.map-localizacao-inicio {
+
+    border: 3px solid #EBCA6A;
+}
+
+.informacoes-localizacao-div-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.informacoes-localizacao-div-inicio h1 {
+    color: #fafafa;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.informacao-localizacao-card-inicio {
+    border-bottom: solid 1px #D1D1DB;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    width: 100%;
+}
+
+.informacao-localizacao-card-inicio h2 {
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 4px 4px 4px 8px;
+    width: 100%;
+}
+
+.icon-informacao-localizacao-card-inicio {
+    color: #EBCA6A;
+    font-size: 22px;
+}
+
+.direitos-autorais-footer {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 12px;
+    background: #282833;
+}
+
+.direitos-autorais-footer h3 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.direitos-autorais-footer img {
+    height: 20px;
+    margin-left: 8px;
+}

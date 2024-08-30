@@ -1,0 +1,79 @@
+.sobre-nos {
+    padding: 64px 48px;
+}
+
+.sobre-nos h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fafafa;
+    margin-bottom: 24px;
+}
+
+.sobre-nos p {
+    color: #fafafa;
+    font-weight: 400;
+    margin-bottom: 48px;
+}
+
+.sobre-nos p span{
+    margin: 0;
+    color: #EBCA6A;
+    font-weight: 700;
+}
+
+.img-sobre-nos {
+    width: 400px;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.img-atendimento-sobre-nos {
+    padding: 12px;
+    border-radius: 8px;
+    border: #EBCA6A 3px solid;
+    background-color: #212121;
+    margin-bottom: 24px;
+}
+
+.sobre-nos h2 {
+    font-size: 20px;
+    color: #fafafa;
+    font-weight: 400;
+}
+
+.wpp-button-atendimento {
+    border: none;
+    border-radius: 8px;
+    background-color: #26A95F;
+    padding: 8px 12px;
+    margin: 12px 0;
+}
+
+.wpp-button-atendimento a{
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.icon-wpp-button-atendimento {
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+.icon-phone-atendimento {
+    color: #EBCA6A;
+    margin-right: 6px;
+}
+
+.phone-atendimento span{
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.div-content-atendimento {
+    margin-left: 24px;
+    background-color: #282833;
+    padding: 48px 12px;
+    border-radius: 12px;
+}

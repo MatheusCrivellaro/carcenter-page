@@ -1,0 +1,21 @@
+.informations-card-inicio {
+    background-color: #282833;
+    padding: 16px 24px;
+    border-radius: 12px;
+}
+
+.informations-card-inicio {
+    margin: 0 12px;
+}
+
+.informations-card-inicio h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #fafafa;
+}
+
+.informations-card-inicio p {
+    font-size: 12px;
+    color: #fafafa;
+}

@@ -1,0 +1,28 @@
+.categorias-card-inicio {
+    height: 70px;
+    width: 150px;
+    border: none;
+    border-radius: 12px;
+    padding: 8px;
+    margin-right: 12px;
+    flex: none;
+    transition: 0.2s;
+    background: #fafafa;
+}
+
+.categorias-card-inicio:hover {
+    box-shadow: rgba(255,255,255, 1) 0 0 10px ;
+}
+
+.categorias-card-inicio img {
+    height: 70%;
+}
+
+.title-card-categoria {
+    font-size: 16px;
+    height: 30%;
+}
+
+.div-itens-card-categoria {
+    height: 100%;
+}

@@ -1,0 +1,12 @@
+.app {
+    font-family: "Inter", sans-serif;
+    background-color: #121217;
+}
+
+.height {
+    height: 100vh;
+}
+
+.div-routes {
+    padding-top: 80px;
+}

@@ -1,0 +1,25 @@
+.container-arrow-financiamento {
+    display: flex;
+    align-items: center;
+}
+
+.arrow-point-financiamento {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #dfab21;
+}
+
+.arrow-line-financiamento {
+    width: 100%;
+    height: 1px;
+    border-bottom: #dfab21 3px dashed;
+    border-image: repeating-linear-gradient(to right, #dfab21 0, #dfab21 12px, transparent 12px, transparent 20px) 1;
+}
+
+.arrow-end-financiamento {
+    color: #dfab21;
+    font-size: 18px;
+    rotate: 90deg;
+}
