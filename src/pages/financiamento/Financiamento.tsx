@@ -1,6 +1,11 @@
 import { useRef } from "react";
 import { FaArrowDown } from "react-icons/fa6";
-import img_financiamento from "../../../public/imgPadrao.jpg";
+import img_financiamento_1 from "../../../public/1_Mesa de trabajo 1.png";
+import img_financiamento_2 from "../../../public/2.png";
+import img_financiamento_3 from "../../../public/3.png";
+import img_financiamento_4 from "../../../public/4.png";
+import img_financiamento_5 from "../../../public/5.png";
+import img_financiamento_6 from "../../../public/6.png";
 import img_form from "../../../public/img-financiamento-formulario.png";
 import ArrowFinanciamento from "../../components/ArrowFinanciamento/ArrowFinanciamento.tsx";
 import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
@@ -40,11 +45,11 @@ const Financiamento = () => {
                 <div className="passos-financiamento-container">
                     <h1>Fazer um financiamento</h1>
                     <div className="passos-financiamento">
-                        <CardPassoFinanciamento img={img_financiamento} title="1º passo - Pesquisa" description="Pesquisamos por taxas dos bancos com base nos seus dados pessoais, dados do veículo e valor a ser financiado." />
+                        <CardPassoFinanciamento img={img_financiamento_1} title="1º passo - Pesquisa" description="Pesquisamos por taxas dos bancos com base nos seus dados pessoais, dados do veículo e valor a ser financiado." />
                         <ArrowFinanciamento />
-                        <CardPassoFinanciamento img={img_financiamento} title="2º passo - Aprovação" description="Você escolhe a melhor opção e passamos todos os seus dados ao banco para te aprovar." />
+                        <CardPassoFinanciamento img={img_financiamento_2} title="2º passo - Aprovação" description="Você escolhe a melhor opção e passamos todos os seus dados ao banco para te aprovar." />
                         <ArrowFinanciamento />
-                        <CardPassoFinanciamento img={img_financiamento} title="Pronto" description="Agora é só assinar o contrato conosco e realizar o pagamento." />
+                        <CardPassoFinanciamento img={img_financiamento_3} title="Pronto" description="Agora é só assinar o contrato conosco e realizar o pagamento." />
                     </div>
                     <div className="button-container-passoas-financiameto">
                         <button onClick={handleScrollForm}>
@@ -56,11 +61,11 @@ const Financiamento = () => {
                 <div className="passos-financiamento-container">
                     <h1>Fazer um refinanciamento</h1>
                     <div className="passos-financiamento">
-                        <CardPassoFinanciamento img={img_financiamento} title="Dinheiro no bolso" description="Faça empréstimos, deixando seu veículo como forma de garantia." />
+                        <CardPassoFinanciamento img={img_financiamento_4} title="Dinheiro no bolso" description="Faça empréstimos, deixando seu veículo como forma de garantia." />
                         <ArrowFinanciamento />
-                        <CardPassoFinanciamento img={img_financiamento} title="Aprovação" description="Pré-aprovação em minutos, após finalizar cadastro." />
+                        <CardPassoFinanciamento img={img_financiamento_5} title="Aprovação" description="Pré-aprovação em minutos, após finalizar cadastro." />
                         <ArrowFinanciamento />
-                        <CardPassoFinanciamento img={img_financiamento} title="Por que contratar?" description="Facilidade em emprestar quantias maiores com prazo maior de pagamento, além de taxas competitivas." />
+                        <CardPassoFinanciamento img={img_financiamento_6} title="Por que contratar?" description="Facilidade em emprestar quantias maiores com prazo maior de pagamento, além de taxas competitivas." />
                     </div>
                     <div className="button-container-passoas-financiameto">
                         <button onClick={handleScrollForm}>
