@@ -23,10 +23,12 @@
 
 .arrow-left-categoria {
     left: 0;
+    z-index: 99;
 }
 
 .arrow-right-categoria {
     right: 0;
+    z-index: 99;
 }
 
 .div-button-scroll-categorias button {

@@ -18,7 +18,7 @@ import SpinnerLoading from "../../components/SpinnerLoading/SpinnerLoading.tsx";
 const Veiculos = () => {
 
     const {state} = useLocation()
-    let marcaSelecionada:string | undefined = state === null ? "" : state.marcaSelecionada
+    const marcaSelecionada:string | undefined = state === null ? "" : state.marcaSelecionada
 
     const searchRef = useRef<HTMLInputElement>(null);
 
@@ -95,10 +95,6 @@ const Veiculos = () => {
         return parseFloat(input.replace(/\./g, '').replace(',', '.'))
     }
 
-    const handleOrdenacao = (value: string) => {
-        value
-    }
-
     const handleSelectMarcaCarousel = (value: string) => {
         setSelectedMarcas(value)
         applyFilter("", value)
@@ -127,7 +123,7 @@ const Veiculos = () => {
         updateFilter('combustivel', "todos", setSelectedCombustivel)
         updateFilter('precoMax', "", handlePrecoMinChange)
         updateFilter('precoMin', "", handlePrecoMaxChange)
-        updateFilter('ordenacao', "relevancia", handleOrdenacao)
+        updateFilter('ordenacao', "relevancia", ()=>{})
     }
 
     useEffect(() => {
@@ -137,7 +133,7 @@ const Veiculos = () => {
             applyFilter("", marcaSelecionada!)
             setSelectedMarcas(marcaSelecionada!)
         }
-    }, [data]);
+    }, [applyFilter, data, marcaSelecionada]);
 
     return (
         <div>
@@ -202,7 +198,7 @@ const Veiculos = () => {
                              :
                             <div className="cards-itens-div-none-veiculos">
                                 <div className="div-container-carousel-categorias">
-                                    <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel} marcas={marcas}/>
+                                    <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel} marcas={marcas} categoriasPerView={isOpenFilter ? 8 : 11}/>
                                 </div>
                                 <div>
                                     <h1 className="col-12 cards-itens-div-none-veiculos-title">Veículos em destaque</h1>
@@ -215,7 +211,7 @@ const Veiculos = () => {
                             </div>) :
                         <div className={`cards-itens-div-veiculos ${!isOpenFilter ? "margin-list-veiculos" : ""}`}>
                             <div className="div-container-carousel-categorias">
-                                <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel} marcas={marcas}/>
+                                <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel} marcas={marcas} categoriasPerView={isOpenFilter ? 8 : 11}/>
                             </div>
                             <div className="informations-list-veiculos">
                                 <div className="search-camp">

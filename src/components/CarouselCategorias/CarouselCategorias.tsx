@@ -3,49 +3,50 @@ import CategoriaCard from "../CategoriaCard/CategoriaCard.tsx";
 import useGetLogoEmpresas from "../../hooks/useGetLogoEmpresas.tsx";
 import {useRef} from "react";
 import {MdArrowBackIosNew, MdArrowForwardIos} from "react-icons/md";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 type props = {
     marcas: string[],
-    handleSelectedMarca: (selectMarca: string) => void
+    handleSelectedMarca: (selectMarca: string) => void,
+    categoriasPerView: number
 }
 
-const CarouselCategorias = ({ marcas, handleSelectedMarca }: props) => {
+const CarouselCategorias = ({ marcas, handleSelectedMarca, categoriasPerView }: props) => {
 
     const { getLogo } = useGetLogoEmpresas()
 
-    const carouselRef = useRef<HTMLDivElement | null>(null);
-
-    const scrollLeft = () => {
-        if (carouselRef.current) {
-            carouselRef.current.scrollBy({ left: -400, behavior: 'smooth' });
-        }
-    };
-
-    const scrollRight = () => {
-        if (carouselRef.current) {
-            carouselRef.current.scrollBy({ left: 400, behavior: 'smooth' });
-        }
-    };
+    const carouselRef = useRef<any>(null);
 
     return (
         <div className="categorias-div-inicio">
             <div className="div-button-scroll-categorias bg-arrow-left arrow-left-categoria">
-                <button onClick={scrollLeft}><MdArrowBackIosNew className="arrow-carousel-categoria"/></button>
+                <button onClick={() => carouselRef.current.slidePrev()}><MdArrowBackIosNew className="arrow-carousel-categoria"/></button>
             </div>
-            <div className="div-cards-categorias-carousel-inicio" ref={carouselRef}>
+            <Swiper
+                slidesPerView={categoriasPerView}
+                onSwiper={(swiper) => (carouselRef.current = swiper)}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
+                loop={true}
+                className="div-cards-categorias-carousel-inicio"
+            >
                 {
                     marcas.map((i, index) =>
-                        <CategoriaCard
-                            image={getLogo(i)}
-                            title={i}
-                            key={index + "categoria"}
-                            handleSelectedMarca={handleSelectedMarca}
-                        />
+                        <SwiperSlide>
+                            <CategoriaCard
+                                image={getLogo(i)}
+                                title={i}
+                                key={index + "categoria"}
+                                handleSelectedMarca={handleSelectedMarca}
+                            />
+                        </SwiperSlide>
                     )
                 }
-            </div>
+            </Swiper>
             <div className="div-button-scroll-categorias bg-arrow-right arrow-right-categoria">
-                <button onClick={scrollRight}><MdArrowForwardIos className="arrow-carousel-categoria"/></button>
+                <button onClick={() => carouselRef.current.slideNext()}><MdArrowForwardIos className="arrow-carousel-categoria"/></button>
             </div>
         </div>
     )
