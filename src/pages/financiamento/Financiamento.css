@@ -209,3 +209,11 @@
     height: min-content;
     border-radius: 16px;
 }
+
+.input-venda-data {
+    margin-bottom: 24px;
+}
+
+.input-venda-cpf {
+    margin-bottom: 24px;
+}

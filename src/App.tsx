@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer.tsx";
 import {useEffect, useState} from "react";
 import FormConcluido from "./pages/form-concluido/FormConcluido.tsx";
 import VerMais from "./pages/ver-mais/VerMais.tsx";
+import Teste from "./pages/teste/Teste.tsx";
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
                     <Route path="/financiamento" element={<Financiamento />} />
                     <Route path="/form-concluido" element={<FormConcluido />} />
                     <Route path="/ver-mais" element={<VerMais />} />
+                    <Route path="/teste" element={<Teste />} />
                 </Routes>
             </div>
             <Footer />

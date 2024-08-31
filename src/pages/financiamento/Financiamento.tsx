@@ -1,42 +1,24 @@
 import { useRef } from "react";
 import { FaArrowDown } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
 import img_financiamento from "../../../public/imgPadrao.jpg";
 import img_form from "../../../public/img-financiamento-formulario.png";
 import ArrowFinanciamento from "../../components/ArrowFinanciamento/ArrowFinanciamento.tsx";
 import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
 import CardIntituicoesParceiras from "../../components/CardIntituicoesParceiras/CardIntituicoesParceiras.tsx";
 import CardPassoFinanciamento from "../../components/CardPassoFinanciamento/CardPassoFinanciamento.tsx";
-import FormDadosCliente from "../../components/FormDadosCliente/FormDadosCliente.tsx";
 import useGetLogoEmpresas from "../../hooks/useGetLogoEmpresas.tsx";
-import { usePostMail } from "../../hooks/usePostMail.tsx";
 import './Financiamento.css';
+import FormFinanciamento from "../../components/FormFinanciamento/FormFinanciamento.tsx";
 
 const Financiamento = () => {
 
     const { getLogoUrl } = useGetLogoEmpresas()
     const formRef = useRef<HTMLDivElement>(null);
-    const { mutate } = usePostMail()
-    const navigate = useNavigate();
-
-    // const { validDate, validCPF, validEmail, validPhone } = useValid()
 
     const handleScrollForm = () => {
         if (formRef.current)
             formRef.current.scrollIntoView({ behavior: 'smooth' });
     };
-
-    const textFormater = (nomeText: string, dadosText: string, telefoneText: string, wppBool: boolean, emailText: string, cpfText: string, dataText: string) => {
-        return nomeText + "\n" + telefoneText + (wppBool ? " - WhatsApp" : "") + "\n" + emailText + (cpfText !== undefined && cpfText ? "\n" + cpfText : "") + (dataText !== undefined && dataText ? "\n" + dataText : "") + "\n" + dadosText
-    }
-
-    const submitEmail = (list: [...any]) => {
-        let to = "ric-cc@hotmail.com";
-        let subject = "Venda de veiculo, " + list[0]
-        let text = textFormater(list[0], list[1], list[2], list[3], list[4], list[5], list[6]);
-        mutate({ to, subject, text })
-        navigate("/form-concluido")
-    }
 
     const listInstitucion = [
         { name: "Bradesco", url: "bradesco.com.br", img: "" },
@@ -99,7 +81,7 @@ const Financiamento = () => {
                     <div>
                         <h1>Quer financiar ou refinanciar seu veículo?</h1>
                         <h2>Preencha os campos abaixo com os dados do seu veículo e com os seus dados.</h2>
-                        <FormDadosCliente submit={submitEmail} financiamento={true} />
+                        <FormFinanciamento />
                     </div>
                     <div className="img-financiamento-form">
                         <img src={img_form} alt="" />
