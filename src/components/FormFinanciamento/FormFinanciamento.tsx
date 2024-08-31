@@ -141,7 +141,7 @@ const FormFinanciamento = () => {
             </div>
             <div className="input-venda-cpf">
                 <h3>Seu CPF (Opcional)</h3>
-                <div className={errors.email ? "content-input-venda-error" : "content-input-venda "}>
+                <div className={errors.cpf ? "content-input-venda-error" : "content-input-venda "}>
                     <LuMail className="icon-input-venda"/>
                     <input type="text" className="input-venda-form-item" placeholder="Digite aqui..."
                            {...register("cpf",
