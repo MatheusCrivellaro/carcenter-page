@@ -39,6 +39,7 @@ const useGetLogoEmpresas = () => {
     };
 
     const getLogo = (nome: string) => {
+        nome = nome.replace(/\s+/g, '').normalize("NFD").replace(/[\u0300-\u036f]/g, '');
         const nomeToLowerCase = nome.toLowerCase();
         return nomeToLowerCase in logos ? logos[nomeToLowerCase] : "https://logo.clearbit.com/" + nomeToLowerCase + ".com";
     };

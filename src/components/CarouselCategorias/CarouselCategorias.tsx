@@ -25,17 +25,13 @@ const CarouselCategorias = ({ marcas, handleSelectedMarca, categoriasPerView }: 
             <Swiper
                 slidesPerView={categoriasPerView}
                 onSwiper={(swiper) => (carouselRef.current = swiper)}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
                 loop={true}
-                spaceBetween={8}
+                spaceBetween={12}
                 className="div-cards-categorias-carousel-inicio"
             >
                 {
                     marcas.map((i, index) =>
-                        <SwiperSlide>
+                        <SwiperSlide key={index}>
                             <CategoriaCard
                                 image={getLogo(i)}
                                 title={i}
