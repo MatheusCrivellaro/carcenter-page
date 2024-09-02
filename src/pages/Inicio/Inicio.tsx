@@ -47,8 +47,7 @@ const Inicio = () => {
                         )}
                     </div>
                     <div className="col-12 d-flex justify-content-start">
-                        <Link to="/veiculos/#veiculos" className="button-veiculos-destaque-inicio">Ver
-                            estoque</Link>
+                        <Link to="/veiculos/#veiculos" className="button-veiculos-destaque-inicio">Ver estoque</Link>
                     </div>
                 </div>
                 <div className="avaliacoes-div-inicio">

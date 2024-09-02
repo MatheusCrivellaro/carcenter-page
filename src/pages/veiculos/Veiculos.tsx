@@ -7,7 +7,6 @@ import { useGetStock } from "../../hooks/useGetStock.tsx";
 import { Filters } from "../../interfaces/Filters.ts";
 import { Vehicle } from "../../interfaces/Vehicle.ts";
 import './Veiculos.css';
-import {useLocation} from "react-router-dom";
 import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
 import ButtonFilterOrdenation from "../../components/ButtonFilterOrdenation/ButtonFilterOrdenation.tsx";
 import SpinnerLoading from "../../components/SpinnerLoading/SpinnerLoading.tsx";
@@ -15,8 +14,8 @@ import SpinnerLoading from "../../components/SpinnerLoading/SpinnerLoading.tsx";
 
 const Veiculos = () => {
 
-    const {state} = useLocation()
-    const marcaSelecionada:string | undefined = state === null ? "" : state.marcaSelecionada
+    // const location = useLocation()
+    // const { state } = location
 
     const searchRef = useRef<HTMLInputElement>(null);
 
@@ -74,7 +73,7 @@ const Veiculos = () => {
             if (searchName !== "")
                 setFilteredVehicles(data!.filter(vehicle => (vehicle.marca ? vehicle.marca.toLowerCase().includes(searchName.toLowerCase()) : false) || vehicle.modelo.toLowerCase().includes(searchName.toLowerCase())))
         }
-    }, [data, filters.cambio, filters.carroceria, filters.combustivel, filters.cor, filters.marca, filters.ordenacao, filters.precoMax, filters.precoMin, ordenation, sortVehicles]))
+    }, [data, filters.cambio, filters.carroceria, filters.combustivel, filters.cor, filters.marca, filters.ordenacao, filters.precoMax, filters.precoMin, ordenation, searchName, sortVehicles]))
 
     const toggleCollapse = () => {
         setIsOpenFilter(!isOpenFilter);
@@ -82,6 +81,10 @@ const Veiculos = () => {
 
     function extractNumbers(input: string): number {
         return parseFloat(input.replace(/\./g, '').replace(',', '.'))
+    }
+
+    const handleSelectedMarca = (value: string) => {
+        updateFilter('marca', value, setSelectedMarcas)
     }
 
     const handlePrecoMinChange = (value: string) => {
@@ -110,14 +113,11 @@ const Veiculos = () => {
     }
 
     useEffect(() => {
-        if (data)
+        if (data) {
             setFilteredVehicles(data);
-        if (marcaSelecionada !== "") {
             applyFilter()
-            setSelectedMarcas(marcaSelecionada!)
         }
-        applyFilter()
-    }, [filters, data, marcaSelecionada, ordenation, applyFilter]);
+    }, [data, filters, ordenation]);
 
     return (
         <div>
@@ -176,7 +176,7 @@ const Veiculos = () => {
                              :
                             <div className="cards-itens-div-none-veiculos">
                                 <div className="div-container-carousel-categorias">
-                                    <CarouselCategorias handleSelectedMarca={setSelectedMarcas} marcas={marcas} categoriasPerView={isOpenFilter ? 6 : 9}/>
+                                    <CarouselCategorias handleSelectedMarca={handleSelectedMarca} marcas={marcas} categoriasPerView={isOpenFilter ? 6 : 9}/>
                                 </div>
                                 <div>
                                     <h1 className="col-12 cards-itens-div-none-veiculos-title">Veículos em destaque</h1>
@@ -195,7 +195,7 @@ const Veiculos = () => {
                             </div>) :
                         <div className={`cards-itens-div-veiculos ${!isOpenFilter ? "margin-list-veiculos" : ""}`}>
                             <div className="div-container-carousel-categorias">
-                                <CarouselCategorias handleSelectedMarca={setSelectedMarcas} marcas={marcas} categoriasPerView={isOpenFilter ? 6 : 9}/>
+                                <CarouselCategorias handleSelectedMarca={handleSelectedMarca} marcas={marcas} categoriasPerView={isOpenFilter ? 6 : 9}/>
                             </div>
                             <div className="informations-list-veiculos">
                                 <div className="search-camp">

@@ -16,8 +16,8 @@ import {TiLocation} from "react-icons/ti";
 import {FaWhatsapp} from "react-icons/fa";
 import {useState} from "react";
 import FormModalEnviarMensagem from "../../components/FormModalEnviarMensagem/FormModalEnviarMensagem.tsx";
-import {IoClose} from "react-icons/io5";
 import Modal from "react-modal"
+import FormModalAprovar from "../../components/FormModalAprovar/FormModalAprovar.tsx";
 
 const VerMais = () => {
 
@@ -75,12 +75,12 @@ const VerMais = () => {
                         borderRadius: '10px',
                         maxWidth: '500px',
                         width: '100%',
+                        backgroundColor: '#121217',
+                        border: 'none',
                     },
                 }}
             >
-                <h2>Aprovar crédito</h2>
-                <p>Conteúdo do modal vai aqui.</p>
-                <button onClick={closeModalAprove}>Fechar</button>
+                <FormModalAprovar handleClose={closeModalAprove}/>
             </Modal>
 
             <Modal
@@ -102,16 +102,13 @@ const VerMais = () => {
                         borderRadius: '10px',
                         maxWidth: '500px',
                         width: '100%',
+                        maxHeight: 'min-content',
                         border: 'none',
                         backgroundColor: '#121217',
                     },
                 }}
             >
-                <div className="d-flex justify-content-between">
-                    <h5>Enviar Mensagem</h5>
-                    <button onClick={closeModalMsg}><IoClose /></button>
-                </div>
-                <FormModalEnviarMensagem />
+                <FormModalEnviarMensagem handleClose={closeModalMsg}/>
             </Modal>
 
             <CarouselVerMais images={veiculo.fotos.foto}/>

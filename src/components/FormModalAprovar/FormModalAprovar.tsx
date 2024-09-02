@@ -1,11 +1,11 @@
-import './FormModalEnviarMensagem.css'
+import './FormModalAprovar.css'
+import {useForm} from "react-hook-form";
+import {useNavigate} from "react-router-dom";
+import {IoClose} from "react-icons/io5";
 import {TbFaceId} from "react-icons/tb";
 import {MdPhone} from "react-icons/md";
 import {LuMail} from "react-icons/lu";
 import {GoArrowRight} from "react-icons/go";
-import {useForm} from "react-hook-form";
-import {useNavigate} from "react-router-dom";
-import {IoClose} from "react-icons/io5";
 
 type FormData = {
     nome: string,
@@ -18,8 +18,7 @@ type props = {
     handleClose: () => void
 }
 
-const FormModalEnviarMensagem = ({ handleClose }:props) => {
-
+const FormModalAprovar = ({ handleClose }:props) => {
     const {register, handleSubmit, setValue, formState: { errors } } = useForm<FormData>()
 
     const navigate = useNavigate();
@@ -50,7 +49,7 @@ const FormModalEnviarMensagem = ({ handleClose }:props) => {
     return (
         <div className="venda-form-input-div">
             <div className="title-modal-form">
-                <h5>Enviar Mensagem</h5>
+                <h5>Simulação de Financiamento</h5>
                 <button onClick={handleClose}><IoClose/></button>
             </div>
 
@@ -96,7 +95,7 @@ const FormModalEnviarMensagem = ({ handleClose }:props) => {
                 {errors.email?.message === "invalido" &&
                     <h4 className="input-venda-error-message">Esse não é um email valido</h4>}
             </div>
-            <div className="input-venda-mensagem">
+            <div className="input-venda-cpf">
                 <h3>Mensagem</h3>
                 <div className={errors.nome ? "content-input-venda-error" : "content-input-venda "}>
                     <TbFaceId className="icon-input-venda"/>
@@ -115,4 +114,4 @@ const FormModalEnviarMensagem = ({ handleClose }:props) => {
     )
 }
 
-export default FormModalEnviarMensagem
+export default FormModalAprovar
