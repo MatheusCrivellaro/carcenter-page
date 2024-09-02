@@ -4,10 +4,10 @@ import { useQuery } from "@tanstack/react-query";
 
 const API_URL = "https://matheuscrivellaro.online"
 
-const USUARIO = "api.autodealer@startgarage.com.br";
+const USUARIO = "apiautodealer@carcenter.com.br";
 //user.api@carcenter.com.br
 const SENHA = "Autonitro@2023";
-const CNPJ = "24967987000186";
+const CNPJ = "04675258000149";
 //30495051000100
 
 const fetchStock = async (): AxiosPromise<Vehicle[]> => {

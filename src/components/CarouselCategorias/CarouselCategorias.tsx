@@ -30,6 +30,7 @@ const CarouselCategorias = ({ marcas, handleSelectedMarca, categoriasPerView }: 
                     disableOnInteraction: false,
                 }}
                 loop={true}
+                spaceBetween={8}
                 className="div-cards-categorias-carousel-inicio"
             >
                 {

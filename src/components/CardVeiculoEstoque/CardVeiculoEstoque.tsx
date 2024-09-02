@@ -28,7 +28,7 @@ const CardVeiculoEstoque = ({ veiculo }:props) => {
                     {veiculo.fotos.foto.length !== 0 ? <CarouselCards veiculo={veiculo} /> : <img src={imgPadrao} alt="" className="img-padrao-card"/>}
                 </div>
                 <div className="div-informations-card-estoque">
-                    <h4><img src={getLogo(veiculo.marca)} alt="" className="img-logo-card-veiculo"/> <span>{veiculo.marca + " "}</span>{veiculo.modelo}</h4>
+                    <h4><img src={getLogo(veiculo.marca ? veiculo.marca : "")} alt="" className="img-logo-card-veiculo"/> <span>{(veiculo.marca ? veiculo.marca : "") + " "}</span>{veiculo.modelo}</h4>
                     <h2>{veiculo.versao}</h2>
                     <div className="ano-km-div-card-veiculo-estoque">
                         <p><MdOutlineCalendarMonth className="icon-card-veiculos-estoque"/>{veiculo.anoFabricacao + "/" + veiculo.anoModelo}</p>
