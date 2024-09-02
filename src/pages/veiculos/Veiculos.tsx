@@ -43,7 +43,7 @@ const Veiculos = () => {
         setValue(value)
     }, [])
 
-    const applyFilter = (ordenation: string, marca: string, search?: string) => {
+    const applyFilter = useCallback((ordenation: string, marca: string, search?: string) => {
         let result = data!.filter((vehicle) => {
             return (
                 (filters.cor === undefined || filters.cor === "todos" || vehicle.cor.toLowerCase() === filters.cor) &&
@@ -64,7 +64,7 @@ const Veiculos = () => {
         if (search) {
             setFilteredVehicles(data!.filter(vehicle => vehicle.marca.toLowerCase().includes(search.toLowerCase()) || vehicle.modelo.toLowerCase().includes(search.toLowerCase())))
         }
-    }
+    }, [])
 
     const sortVehicles = (vehicles: Vehicle[], typeOrdenacao?: string): Vehicle[] => {
         const sortFunctions: { [key: string]: (a: Vehicle, b: Vehicle) => number } = {
