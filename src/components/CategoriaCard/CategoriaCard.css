@@ -4,14 +4,14 @@
     border: none;
     border-radius: 12px;
     padding: 8px;
-    margin-right: 12px;
+    margin: 12px;
     flex: none;
     transition: 0.2s;
     background: #fafafa;
 }
 
 .categorias-card-inicio:hover {
-    box-shadow: rgba(255,255,255, 1) 0 0 10px ;
+    box-shadow: rgba(255,255,255, 0.8) 0 0 7px ;
 }
 
 .categorias-card-inicio img {

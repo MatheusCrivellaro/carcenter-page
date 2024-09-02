@@ -10,7 +10,6 @@ import './Veiculos.css';
 import {useLocation} from "react-router-dom";
 import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
 import ButtonFilterOrdenation from "../../components/ButtonFilterOrdenation/ButtonFilterOrdenation.tsx";
-import {CgSearch} from "react-icons/cg";
 import SpinnerLoading from "../../components/SpinnerLoading/SpinnerLoading.tsx";
 
 
@@ -57,7 +56,7 @@ const Veiculos = () => {
             : vehicles;
     };
 
-    const applyFilter = (useCallback((search?: string) => {
+    const applyFilter = (useCallback(() => {
         if (data) {
             let result = data!.filter((vehicle) => {
                 return (
@@ -72,17 +71,10 @@ const Veiculos = () => {
             });
             result = sortVehicles(result, ordenation !== "" ? ordenation : filters.ordenacao);
             setFilteredVehicles(result);
-            if (search)
-                setFilteredVehicles(data!.filter(vehicle => (vehicle.marca ? vehicle.marca.toLowerCase().includes(search.toLowerCase()) : false) || vehicle.modelo.toLowerCase().includes(search.toLowerCase())))
+            if (searchName !== "")
+                setFilteredVehicles(data!.filter(vehicle => (vehicle.marca ? vehicle.marca.toLowerCase().includes(searchName.toLowerCase()) : false) || vehicle.modelo.toLowerCase().includes(searchName.toLowerCase())))
         }
     }, [data, filters.cambio, filters.carroceria, filters.combustivel, filters.cor, filters.marca, filters.ordenacao, filters.precoMax, filters.precoMin, ordenation, sortVehicles]))
-
-    const handleSearchButton = () => {
-        setSearchName("")
-        if (searchRef.current) {
-            applyFilter(searchRef.current.value)
-        }
-    }
 
     const toggleCollapse = () => {
         setIsOpenFilter(!isOpenFilter);
@@ -90,10 +82,6 @@ const Veiculos = () => {
 
     function extractNumbers(input: string): number {
         return parseFloat(input.replace(/\./g, '').replace(',', '.'))
-    }
-
-    const handleSelectMarcaCarousel = (value: string) => {
-        setSelectedMarcas(value)
     }
 
     const handlePrecoMinChange = (value: string) => {
@@ -188,7 +176,7 @@ const Veiculos = () => {
                              :
                             <div className="cards-itens-div-none-veiculos">
                                 <div className="div-container-carousel-categorias">
-                                    <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel} marcas={marcas} categoriasPerView={isOpenFilter ? 6 : 9}/>
+                                    <CarouselCategorias handleSelectedMarca={setSelectedMarcas} marcas={marcas} categoriasPerView={isOpenFilter ? 6 : 9}/>
                                 </div>
                                 <div>
                                     <h1 className="col-12 cards-itens-div-none-veiculos-title">Veículos em destaque</h1>
@@ -207,12 +195,11 @@ const Veiculos = () => {
                             </div>) :
                         <div className={`cards-itens-div-veiculos ${!isOpenFilter ? "margin-list-veiculos" : ""}`}>
                             <div className="div-container-carousel-categorias">
-                                <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel} marcas={marcas} categoriasPerView={isOpenFilter ? 6 : 9}/>
+                                <CarouselCategorias handleSelectedMarca={setSelectedMarcas} marcas={marcas} categoriasPerView={isOpenFilter ? 6 : 9}/>
                             </div>
                             <div className="informations-list-veiculos">
                                 <div className="search-camp">
                                     <input type="text" placeholder="Busque por Marca e Modelo" value={searchName} ref={searchRef} onChange={(e) => setSearchName(e.target.value)}/>
-                                    <button onClick={handleSearchButton}><CgSearch/></button>
                                 </div>
                                 <div className="div-buttons-informations-list-veiculos">
                                     <button onClick={toggleCollapse}
