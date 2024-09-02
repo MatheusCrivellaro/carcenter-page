@@ -1,7 +1,6 @@
 import {useCallback, useEffect, useRef, useState} from "react";
 import CardVeiculoEstoque from "../../components/CardVeiculoEstoque/CardVeiculoEstoque.tsx";
 import CarouselCategorias from "../../components/CarouselCategorias/CarouselCategorias.tsx";
-import OptionFiltroContainer from "../../components/OptionFiltroContainer/OptionFiltroContainer.tsx";
 import useCollects from "../../hooks/useCollects.tsx";
 import { useGetStock } from "../../hooks/useGetStock.tsx";
 import { Filters } from "../../interfaces/Filters.ts";
@@ -10,6 +9,8 @@ import './Veiculos.css';
 import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
 import ButtonFilterOrdenation from "../../components/ButtonFilterOrdenation/ButtonFilterOrdenation.tsx";
 import SpinnerLoading from "../../components/SpinnerLoading/SpinnerLoading.tsx";
+import {FilterConfig} from "../../interfaces/FilterConfig.ts";
+import FiltroListGenerator from "../../components/FiltroListGenerator/FiltroListGenerator.tsx";
 
 
 const Veiculos = () => {
@@ -35,6 +36,15 @@ const Veiculos = () => {
     const [filteredVehicles, setFilteredVehicles] = useState<Vehicle[]>([]);
     const [filters, setFilters] = useState<Filters>({});
     const [isOpenFilter, setIsOpenFilter] = useState(false);
+
+    const listFiltersConfig: FilterConfig[] = [
+        {title: "Marcas", group: "marca", value: marcas, handle: (e) => updateFilter('marca', e.target.value, setSelectedMarcas), selected: selectedMarcas, todos: true},
+        {title: "Cores", group: "cor", value: cores, handle: (e) => updateFilter('cor', e.target.value, setSelectedColors), selected: selectedColors, todos: true},
+        {title: "Câmbio", group: "cambio", value: cambios, handle: (e) => updateFilter('cambio', e.target.value, setSelectedCambios), selected: selectedCambios, todos: true},
+        {title: "Combustível", group: "combustivel", value: combustiveis, handle: (e) => updateFilter('combustivel', e.target.value, setSelectedCombustivel), selected: selectedCombustivel, todos: true},
+        {title: "Carroceria", group: "carroceria", value: carrocerias, handle: (e) => updateFilter('carroceria', e.target.value, setSelectedCarroceria), selected: selectedCarroceria, todos: true}
+    ]
+
 
     const updateFilter = useCallback((key: keyof Filters, value: string, setValue: (value: string) => void) => {
         setFilters((prevFilters) => ({ ...prevFilters, [key]: value }));
@@ -152,22 +162,7 @@ const Veiculos = () => {
                                        onChange={(e) => handlePrecoMaxChange(e.target.value)}/>
                             </div>
                         </div>
-
-                        <OptionFiltroContainer title="Marcas" group={"marca"} value={marcas}
-                                               handle={(e) => updateFilter('marca', e.target.value, setSelectedMarcas)}
-                                               selected={selectedMarcas} todos={true}/>
-                        <OptionFiltroContainer title="Cores" group={"cor"} value={cores}
-                                               handle={(e) => updateFilter('cor', e.target.value, setSelectedColors)}
-                                               selected={selectedColors} todos={true}/>
-                        <OptionFiltroContainer title="Câmbio" group={"cambio"} value={cambios}
-                                               handle={(e) => updateFilter('cambio', e.target.value, setSelectedCambios)}
-                                               selected={selectedCambios} todos={true}/>
-                        <OptionFiltroContainer title="Combustível" group={"combustivel"} value={combustiveis}
-                                               handle={(e) => updateFilter('combustivel', e.target.value, setSelectedCombustivel)}
-                                               selected={selectedCombustivel} todos={true}/>
-                        <OptionFiltroContainer title="Carroceria" group={"carroceria"} value={carrocerias}
-                                               handle={(e) => updateFilter('carroceria', e.target.value, setSelectedCarroceria)}
-                                               selected={selectedCarroceria} todos={true}/>
+                        <FiltroListGenerator filtros={listFiltersConfig} />
                     </div>
                 }
                 <div className={`cards-div-veiculos ${isOpenFilter ? "is-open-div-cards" : "is-close-div-cards"}`}>
