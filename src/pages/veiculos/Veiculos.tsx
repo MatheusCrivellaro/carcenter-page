@@ -152,6 +152,7 @@ const Veiculos = () => {
                                        onChange={(e) => handlePrecoMaxChange(e.target.value)}/>
                             </div>
                         </div>
+
                         <OptionFiltroContainer title="Marcas" group={"marca"} value={marcas}
                                                handle={(e) => updateFilter('marca', e.target.value, setSelectedMarcas)}
                                                selected={selectedMarcas} todos={true}/>
@@ -170,36 +171,17 @@ const Veiculos = () => {
                     </div>
                 }
                 <div className={`cards-div-veiculos ${isOpenFilter ? "is-open-div-cards" : "is-close-div-cards"}`}>
-                    {filteredVehicles.length === 0 ?
-                        (isLoading ?
-                            <SpinnerLoading />
-                             :
-                            <div className="cards-itens-div-none-veiculos">
-                                <div className="div-container-carousel-categorias">
-                                    <CarouselCategorias handleSelectedMarca={handleSelectedMarca} marcas={marcas} categoriasPerView={isOpenFilter ? 6 : 9}/>
-                                </div>
-                                <div>
-                                    <h1 className="col-12 cards-itens-div-none-veiculos-title">Veículos em destaque</h1>
-                                    <h3><span>{filteredVehicles.length}</span> veículos encontrados</h3>
-                                    <button onClick={toggleCollapse}
-                                            className="button-informations-list-veiculos">Filtrar
-                                    </button>
-                                    <ButtonFilterOrdenation handle={setOrdenation}
-                                                            classeButton={"button-ordenar-informations-list-veiculos"}
-                                                            classeList={"button-ordenar-menu-informations-list-veiculos"}/>
-                                </div>
-                                <h2 className="cards-itens-div-none-veiculos-msg-desenho">:(</h2>
-                                <h2 className="cards-itens-div-none-veiculos-msg">
-                                    Ops, não há veículos disponíveis para os filtros aplicados. Por favor, tente outra combinação de filtros
-                                </h2>
-                            </div>) :
+                    {isLoading ?
+                        <SpinnerLoading/> :
                         <div className={`cards-itens-div-veiculos ${!isOpenFilter ? "margin-list-veiculos" : ""}`}>
                             <div className="div-container-carousel-categorias">
-                                <CarouselCategorias handleSelectedMarca={handleSelectedMarca} marcas={marcas} categoriasPerView={isOpenFilter ? 6 : 9}/>
+                                <CarouselCategorias handleSelectedMarca={handleSelectedMarca} marcas={marcas}
+                                                    categoriasPerView={isOpenFilter ? 6 : 9}/>
                             </div>
                             <div className="informations-list-veiculos">
                                 <div className="search-camp">
-                                    <input type="text" placeholder="Busque por Marca e Modelo" value={searchName} ref={searchRef} onChange={(e) => setSearchName(e.target.value)}/>
+                                    <input type="text" placeholder="Busque por Marca e Modelo" value={searchName}
+                                           ref={searchRef} onChange={(e) => setSearchName(e.target.value)}/>
                                 </div>
                                 <div className="div-buttons-informations-list-veiculos">
                                     <button onClick={toggleCollapse}
@@ -214,7 +196,16 @@ const Veiculos = () => {
                             <div
                                 className={isOpenFilter ? "list-veiculos-container-open-filter" : "list-veiculos-container-close-filter"}>
                                 {filteredVehicles.length === 0 ?
-                                    <h2>Nada encontrado</h2> : filteredVehicles?.map(value =>
+                                    <div>
+                                        <h2 className="cards-itens-div-none-veiculos-msg-desenho">:(</h2>
+                                        <h2 className="cards-itens-div-none-veiculos-msg">
+                                            Ops, não há veículos disponíveis para os filtros aplicados. Por favor, tente
+                                            outra
+                                            combinação de filtros
+                                        </h2>
+                                    </div>
+                                    :
+                                    filteredVehicles?.map(value =>
                                         <CardVeiculoEstoque veiculo={value} key={value.codigo}/>
                                     )}
                             </div>

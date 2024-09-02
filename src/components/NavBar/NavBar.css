@@ -3,7 +3,7 @@ nav {
     width: 100%;
     justify-content: space-between;
     background: #212121;
-    z-index: 1;
+    z-index: 999;
     height: 80px;
 }
 
