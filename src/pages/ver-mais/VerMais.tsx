@@ -15,9 +15,9 @@ import StickyBox from "react-sticky-box";
 import {TiLocation} from "react-icons/ti";
 import {FaWhatsapp} from "react-icons/fa";
 import {useState} from "react";
-import Modal from 'react-modal';
 import FormModalEnviarMensagem from "../../components/FormModalEnviarMensagem/FormModalEnviarMensagem.tsx";
 import {IoClose} from "react-icons/io5";
+import Modal from "react-modal"
 
 const VerMais = () => {
 
