@@ -121,7 +121,7 @@ const NavBar = () => {
             </nav>
             <motion.div
                 initial={{height: 0, opacity: 1}}
-                animate={{height: isOpenOptions ? '100vh' : 0}}
+                animate={{height: isOpenOptions ? 'auto' : 0}}
                 transition={{duration: 0.3}}
                 style={{overflow: 'hidden'}}
                 className="nav-collapse-div"
@@ -159,12 +159,9 @@ const NavBar = () => {
                     </NavLink>
                 </div>
 
-                <a href="https://api.whatsapp.com/send/?phone=5511934524004&text&type=phone_number&app_absent=0"
-                   className="text-decoration-none">
-                    <button className='whatsapp-button-nav-collapse'>
-                        <p className='text-whatsapp-button-nav text-button-nav'>(11) 3682-4544</p>
-                        <FaWhatsapp className="icon-wpp-nav"/>
-                    </button>
+                <a href="https://api.whatsapp.com/send/?phone=5511934524004&text&type=phone_number&app_absent=0" className='whatsapp-button-nav-collapse'>
+                    <p>(11) 3682-4544</p>
+                    <FaWhatsapp className="icon-wpp-nav-collapse"/>
                 </a>
             </motion.div>
         </div>

@@ -8,7 +8,7 @@ type props = {
 
 const AvaliacaoCard = ({ title, description, image }: props) => {
     return (
-        <div className="col-4">
+        <div>
             <div className="avaliacoes-card-inicio">
                 <div className="title-card-avaliacoes-inicio">
                     <img src={image} alt=""/>

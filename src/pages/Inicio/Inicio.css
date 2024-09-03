@@ -66,6 +66,12 @@
     border-bottom: #3F3F50 3px solid;
 }
 
+@media (max-width: 992px) {
+    .div-carousel-categorias {
+        padding: 24px 12px;
+    }
+}
+
 @media (min-width: 1600px) {
     .div-carousel-categorias {
         padding: 24px 192px;
@@ -88,12 +94,24 @@
 .veiculos-destaque-div-inicio {
     padding: 24px 48px;
     background: #121217;
+    margin: 0 12px;
+}
+
+@media (max-width: 992px) {
+    .veiculos-destaque-div-inicio {
+        padding: 24px 12px;
+    }
 }
 
 @media (min-width: 1600px) {
     .veiculos-destaque-div-inicio {
         padding: 24px 192px;
     }
+}
+
+.button-veiculos-destaque-div-inicio {
+    display: flex;
+    justify-content: start;
 }
 
 .veiculos-destaque-div-inicio h1 {
@@ -104,9 +122,17 @@
 }
 
 .veiculos-destaque-cards-div-inicio {
+    max-width: 100%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-bottom: 12px;
+    gap: 24px;
+}
+
+@media (max-width: 992px) {
+    .veiculos-destaque-cards-div-inicio {
+        grid-template-columns: 1fr;
+    }
 }
 
 .button-veiculos-destaque-inicio {
@@ -135,9 +161,28 @@
     }
 }
 
+@media (max-width: 992px) {
+    .avaliacoes-div-inicio {
+        padding: 24px 24px;
+    }
+}
+
 .avaliacoes-cards-div-inicio {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.avaliacoes-cards-items-inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 992px) {
+    .avaliacoes-cards-items-inicio {
+        grid-template-columns: 1fr;
+    }
 }
 
 .avaliacoes-cards-div-inicio h1 {

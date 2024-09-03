@@ -74,6 +74,7 @@ nav {
 }
 
 .collapse-options-nav {
+    height: min-content;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content min-content min-content min-content min-content;
@@ -194,13 +195,22 @@ nav {
 }
 
 .whatsapp-button-nav-collapse {
+    text-decoration: none;
+    color: #fafafa;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    border: none;
-    background: #26A95F;
-    border-radius: 8px;
     width: 100%;
-    margin: 24px;
+    justify-content: center;
+    align-items: center;
+    background: #26A95F;
+    padding: 8px;
+}
+
+.whatsapp-button-nav-collapse p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.icon-wpp-nav-collapse {
+    margin-left: 8px;
 }
