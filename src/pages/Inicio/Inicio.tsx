@@ -34,9 +34,9 @@ const Inicio = () => {
             <div className="inicio">
                 <ButtonSuspense/>
                 <CarouselBanner/>
-
                 <div className="div-carousel-categorias">
-                    <CarouselCategorias marcas={marcas} handleSelectedMarca={handleSelectedMarca} categoriasPerView={9}/>
+                    <CarouselCategorias marcas={marcas} handleSelectedMarca={handleSelectedMarca}
+                                        categoriasPerView={9}/>
                 </div>
 
                 <div className="veiculos-destaque-div-inicio" id="veiculos-destaque">

@@ -26,6 +26,19 @@ nav {
     font-size: 16px;
 }
 
+@media (max-width: 992px) {
+    .div-horarios-nav {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .div-horarios-nav span {
+        font-weight: 700;
+        font-size: 12px;
+    }
+}
+
 .suspense-nav {
     position: fixed;
     top:0
@@ -38,8 +51,47 @@ nav {
     height: 100%;
 }
 
+.button-open-options {
+    border: none;
+    background: transparent;
+    color: #dfab21;
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+}
+
+@media (min-width: 992px) {
+    .button-open-options {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .collapse-options-nav {
+        display: none;
+        background: #C28800;
+    }
+}
+
+.collapse-options-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content;
+    gap: 8px;
+}
+
+.collapse-options-nav p {
+    color: #fafafa;
+}
+
 .title-div-nav img {
-    height: max-content;
+    height: 50px;
+}
+
+@media (max-width: 992px) {
+    .title-div-nav img {
+        height: 40px;
+    }
 }
 
 .optionals-div-nav {
@@ -47,6 +99,12 @@ nav {
     align-items: center;
     justify-content: end;
     padding: 0 24px;
+}
+
+@media (max-width: 992px) {
+    .optionals-div-nav {
+        display: none;
+    }
 }
 
 .title {
@@ -84,6 +142,7 @@ nav {
     margin: 0 0 0 24px;
     font-size: 16px;
     text-decoration: none;
+    width: min-content;
 }
 
 .whatsapp-button-nav {
@@ -104,4 +163,44 @@ nav {
 .icon-wpp-nav {
     color: #FAFAFA;
     margin: 0 4px;
+}
+
+.button-nav-collapse {
+    padding-left: 8px;
+    margin-left: 8px;
+    white-space: nowrap;
+    width: min-content;
+    height: min-content;
+    text-decoration: none;
+    color: #fafafa;
+    transition: 0.2s;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.active-button-nav-collapse {
+    border-left: 1px solid #dfab21;
+    color: #dfab21;
+    padding-left: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav-collapse-div {
+    background: #212121;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.whatsapp-button-nav-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: none;
+    background: #26A95F;
+    border-radius: 8px;
+    width: 100%;
+    margin: 24px;
 }
