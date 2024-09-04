@@ -41,7 +41,8 @@ nav {
 
 .suspense-nav {
     position: fixed;
-    top:0
+    top:0;
+    width: 100%;
 }
 
 .title-div-nav {
@@ -193,7 +194,6 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: absolute;
     width: 100%;
     z-index: 999;
 }
