@@ -2,15 +2,33 @@
     padding: 48px 64px;
 }
 
+@media (max-width: 992px) {
+    .venda {
+        padding: 24px 24px;
+    }
+}
+
 .venda-container {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 1fr 1fr;
     gap: 48px;
+}
+
+@media (max-width: 992px) {
+    .venda-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 .venda-form {
     padding: 24px 0 24px 48px;
+}
+
+@media (max-width: 992px) {
+    .venda-form {
+        padding: 0;
+    }
 }
 
 .venda-form h3 {
@@ -23,11 +41,23 @@
     margin-bottom: 48px;
 }
 
+@media (max-width: 992px) {
+    .venda-form-title {
+        margin-bottom: 24px;
+    }
+}
+
 .venda-form h1 {
     color: #fafafa;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 8px;
+}
+
+@media (max-width: 992px) {
+    .venda-form-title h1 {
+        font-size: 24px;
+    }
 }
 
 .venda-form h2 {
@@ -36,9 +66,21 @@
     font-weight: 400;
 }
 
+@media (max-width: 992px) {
+    .venda-form-title h2 {
+        font-size: 16px;
+    }
+}
+
 .venda-como-funciona {
     width: 100%;
     padding: 0 48px;
+}
+
+@media (max-width: 992px) {
+    .venda-como-funciona {
+        padding: 0;
+    }
 }
 
 .venda-como-funciona-title {
@@ -49,6 +91,13 @@
     margin-bottom: 48px;
 }
 
+@media (max-width: 992px) {
+    .venda-como-funciona-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+}
+
 .container-img-passo-venda img {
     width: 180px;
     height: 180px;
@@ -56,15 +105,41 @@
     border-radius: 8px;
 }
 
+@media (max-width: 992px) {
+    .container-img-passo-venda img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 12px;
+        margin-right: 0;
+    }
+}
+
 .container-img-passo-venda {
     display: flex;
     width: 100%;
+}
+
+@media (max-width: 992px) {
+    .container-img-passo-venda {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 .container-img-passo-venda h1 {
     color: #fafafa;
     font-size: 24px;
     font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .container-img-passo-venda h1 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
 }
 
 .container-img-passo-venda p {
@@ -74,10 +149,25 @@
     margin: 0;
 }
 
+@media (max-width: 992px) {
+    .container-img-passo-venda p {
+        font-size: 16px;
+    }
+}
+
 .container-text-passo-venda {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .container-text-passo-venda {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .container-img-passo-venda-contrario {
@@ -87,10 +177,27 @@
     margin: 24px 0;
 }
 
+@media (max-width: 992px) {
+    .container-img-passo-venda-contrario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
 .container-img-passo-venda-contrario h1 {
     color: #fafafa;
     font-size: 24px;
     font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .container-img-passo-venda-contrario h1 {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
 }
 
 .container-img-passo-venda-contrario p {
@@ -100,9 +207,25 @@
     margin: 0;
 }
 
+@media (max-width: 992px) {
+    .container-img-passo-venda-contrario p {
+        font-size: 16px;
+    }
+}
+
 .container-img-passo-venda-contrario img {
     width: 180px;
     height: 180px;
     margin-left: 24px;
     border-radius: 8px;
+}
+
+@media (max-width: 992px) {
+    .container-img-passo-venda-contrario img {
+        order: 1;
+        width: 120px;
+        height: 120px;
+        margin: 0;
+        margin-bottom: 12px;
+    }
 }
