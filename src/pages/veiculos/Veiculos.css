@@ -1,16 +1,23 @@
 .veiculos {
-    width: 100%;
+    max-width: 100vw;
     position: relative;
-    display: flex;
 }
 
 .filtro-div-veiculos {
     min-height: 100vh;
     max-height: 100%;
     border-right: #282833 solid 1px;
-    width: 25%;
     background-color: #121217;
     padding: 40px 16px 0;
+    max-width: 100%;
+}
+
+@media (max-width: 992px) {
+    .filtro-div-veiculos {
+        min-height: auto;
+        height: auto;
+        padding: 16px;
+    }
 }
 
 .cards-div-veiculos {
@@ -18,11 +25,25 @@
 }
 
 .is-open-div-cards {
-    max-width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+@media (max-width: 992px) {
+    .is-open-div-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 .is-close-div-cards {
-    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 992px) {
+    .is-close-div-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 .menu-filtros-div-veiculos {
@@ -197,9 +218,17 @@ input::-webkit-inner-spin-button {
 }
 
 .cards-itens-div-veiculos h3 {
-    font-weight: 300;
     margin-bottom: 16px;
     margin-top: 16px;
+    color: #fafafa;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+@media (max-width: 992px) {
+    .cards-itens-div-veiculos h3 {
+        font-size: 18px;
+    }
 }
 
 .cards-itens-div-veiculos span {
@@ -242,6 +271,12 @@ input::-webkit-inner-spin-button {
     align-items: center;
 }
 
+@media (max-width: 992px) {
+    .informations-list-veiculos {
+        flex-direction: column;
+    }
+}
+
 .button-informations-list-veiculos {
     height: 100%;
     width: 100%;
@@ -267,17 +302,38 @@ input::-webkit-inner-spin-button {
     height: 100%;
 }
 
+@media (max-width: 992px) {
+    .div-buttons-informations-list-veiculos {
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .list-veiculos-container-close-filter {
     width: 100%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
     padding-bottom: 48px;
+}
+
+@media (max-width: 992px) {
+    .list-veiculos-container-close-filter {
+        grid-template-columns: 1fr;
+    }
 }
 
 .list-veiculos-container-open-filter {
     width: 100%;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+@media (max-width: 992px) {
+    .list-veiculos-container-open-filter {
+        grid-template-columns: 1fr;
+    }
 }
 
 .search-camp {
@@ -286,6 +342,14 @@ input::-webkit-inner-spin-button {
     border: 1px solid #474759;
     transition: 0.2s;
     width: 25%;
+    background: #282833;
+}
+
+@media (max-width: 992px) {
+    .search-camp {
+        width: 100%;
+        margin-bottom: 16px;
+    }
 }
 
 .search-camp input::placeholder {
@@ -294,7 +358,7 @@ input::-webkit-inner-spin-button {
 
 .search-camp input {
     border-radius: 8px 0 0 8px;
-    background-color: #282833;
+    background-color: transparent;
     width: 100%;
     transition: 0.1s;
     border: 0;

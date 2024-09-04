@@ -23,6 +23,12 @@
     object-fit: cover;
 }
 
+@media (max-width: 992px) {
+    .item-carousel-ver-mais img {
+        height: 300px;
+    }
+}
+
 .button-next-carousel-ver-mais {
     position: absolute;
     right: 0;

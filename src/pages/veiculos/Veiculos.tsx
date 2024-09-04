@@ -11,6 +11,7 @@ import ButtonFilterOrdenation from "../../components/ButtonFilterOrdenation/Butt
 import SpinnerLoading from "../../components/SpinnerLoading/SpinnerLoading.tsx";
 import {FilterConfig} from "../../interfaces/FilterConfig.ts";
 import FiltroListGenerator from "../../components/FiltroListGenerator/FiltroListGenerator.tsx";
+import { motion } from 'framer-motion';
 
 
 const Veiculos = () => {
@@ -49,7 +50,9 @@ const Veiculos = () => {
     const updateFilter = useCallback((key: keyof Filters, value: string, setValue: (value: string) => void) => {
         setFilters((prevFilters) => ({ ...prevFilters, [key]: value }));
         setValue(value)
-    }, [])
+    }, [data])
+
+    // [data]: isso da um warn, mas não duvide e nem questione, apenas aceite que esse é o certo a se fazer
 
     const sortVehicles = (vehicles: Vehicle[], typeOrdenacao?: string): Vehicle[] => {
         const sortFunctions: { [key: string]: (a: Vehicle, b: Vehicle) => number } = {
@@ -132,9 +135,14 @@ const Veiculos = () => {
     return (
         <div>
             <ButtonSuspense/>
-            <div className="veiculos" id="veiculos">
+            <div className={`veiculos ${isOpenFilter ? "is-open-div-cards" : "is-close-div-cards"}`} id="veiculos">
                 {isOpenFilter &&
-                    <div className="filtro-div-veiculos">
+                    <motion.div
+                        className="filtro-div-veiculos"
+                        initial={{height: 0}}
+                        animate={{ height: 'auto'}}
+                        transition={{ duration: 0.2 }}
+                    >
                         <div className="menu-filtros-div-veiculos">
                             <h1 className="col-12">Filtrar</h1>
                             <div className="d-flex col-12">
@@ -163,15 +171,15 @@ const Veiculos = () => {
                             </div>
                         </div>
                         <FiltroListGenerator filtros={listFiltersConfig} />
-                    </div>
+                    </motion.div>
                 }
-                <div className={`cards-div-veiculos ${isOpenFilter ? "is-open-div-cards" : "is-close-div-cards"}`}>
+                <div className={`cards-div-veiculos`}>
                     {isLoading ?
                         <SpinnerLoading/> :
                         <div className={`cards-itens-div-veiculos ${!isOpenFilter ? "margin-list-veiculos" : ""}`}>
                             <div className="div-container-carousel-categorias">
                                 <CarouselCategorias handleSelectedMarca={handleSelectedMarca} marcas={marcas}
-                                                    categoriasPerView={isOpenFilter ? 6 : 9}/>
+                                                    categoriasPerView={6}/>
                             </div>
                             <div className="informations-list-veiculos">
                                 <div className="search-camp">
