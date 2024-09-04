@@ -35,28 +35,6 @@ const FormDadosClienteVenda = () => {
         navigate("/form-concluido")
     }
 
-    // const formatCpf = (value: string) => {
-    //     value = value.replace(/\D/g, '');
-    //     if (value.length > 11)
-    //         value = value.slice(0, 11);
-    //     return value
-    //         .replace(/(\d{3})(\d)/, '$1.$2')
-    //         .replace(/(\d{3})(\d)/, '$1.$2')
-    //         .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-    // };
-    //
-    // const formatDate = (value: string): string => {
-    //     value = value.replace(/\D/g, '');
-    //     if (value.length > 8)
-    //         value = value.slice(0, 8);
-    //     if (value.length <= 8) {
-    //         value = value.replace(/(\d{2})(\d)/, '$1/$2');
-    //         value = value.replace(/(\d{2})(\d)/, '$1/$2');
-    //     }
-    //     return value.slice(0, 10);
-    // };
-    //
-
     const formatPhone = (value: string) => {
         value = value.replace(/\D/g, '');
         if (value.length > 11)

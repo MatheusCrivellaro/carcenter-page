@@ -130,6 +130,12 @@
     transition: 0.2s;
 }
 
+@media (max-width: 992px) {
+    .button-submit-form-venda {
+        width: 100%;
+    }
+}
+
 .button-submit-form-venda:hover {
     background: #3F3F50;
 }
