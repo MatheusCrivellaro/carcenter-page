@@ -2,6 +2,12 @@
     padding: 64px 48px;
 }
 
+@media (max-width: 992px) {
+    .financiamento {
+        padding: 24px;
+    }
+}
+
 .financiamento-container {
     width: 100%;
     display: flex;
@@ -15,11 +21,29 @@
     width: 80%;
 }
 
+@media (max-width: 992px) {
+    .passos-financiamento-container {
+        margin-bottom: 48px;
+        width: 100%;
+    }
+}
+
 .passos-financiamento {
     display: grid;
     grid-template-columns: 3fr 2fr 3fr 2fr 3fr;
     gap: 32px;
     margin: 48px 0;
+}
+
+@media (max-width: 992px) {
+    .passos-financiamento {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr 3fr 1fr 3fr;
+        gap: 32px;
+        margin: 48px 0;
+    }
 }
 
 .passos-financiamento-container h1 {
@@ -67,11 +91,24 @@
     }
 }
 
+@media (max-width: 992px) {
+    .container-cards-instituicoes-financiamento {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+    }
+}
+
 .instituicoes-financiamento {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media (max-width: 992px) {
+    .instituicoes-financiamento {
+        width: 100%;
+    }
 }
 
 .instituicoes-financiamento h1{
@@ -83,12 +120,26 @@
     margin-bottom: 48px;
 }
 
+@media (max-width: 992px) {
+    .instituicoes-financiamento h1{
+        margin-bottom: 24px;
+    }
+}
+
 .formilario-financiamento {
     width: 90%;
     margin-top: 48px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
+}
+
+@media (max-width: 992px) {
+    .formilario-financiamento {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 .formilario-financiamento h1 {
@@ -202,6 +253,12 @@
 .img-financiamento-form {
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 992px) {
+    .img-financiamento-form {
+        display: none;
+    }
 }
 
 .img-financiamento-form img{

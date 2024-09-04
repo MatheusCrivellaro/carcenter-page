@@ -5,6 +5,21 @@
     margin-bottom: 8px;
 }
 
+@media (max-width: 992px) {
+    .passos-financiamento-img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .passos-financiamento-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .title-card-passo-financiamento {
     color: #fafafa;
 }
@@ -24,4 +39,10 @@
     font-size: 12px;
     font-weight: 400;
     text-align: center;
+}
+
+@media (max-width: 992px) {
+    .passos-financiamento-card p {
+        margin: 0;
+    }
 }
