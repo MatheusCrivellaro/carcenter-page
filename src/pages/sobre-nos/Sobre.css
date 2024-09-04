@@ -2,6 +2,12 @@
     padding: 64px 48px;
 }
 
+@media (max-width:992px) {
+    .sobre-nos {
+        padding: 24px;
+    }
+}
+
 .sobre-nos h1 {
     font-size: 24px;
     font-weight: 700;
@@ -40,6 +46,7 @@
     font-size: 20px;
     color: #fafafa;
     font-weight: 400;
+    text-align: center;
 }
 
 .wpp-button-atendimento {
@@ -69,11 +76,77 @@
     margin: 0;
     font-weight: 400;
     font-size: 16px;
+    color: #EBCA6A;
 }
 
 .div-content-atendimento {
-    margin-left: 24px;
     background-color: #282833;
-    padding: 48px 12px;
+    padding: 48px;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.container-images-sobre-nos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+@media (max-width:992px) {
+    .container-images-sobre-nos {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+.container-images-sobre-nos img {
+    width: 100%;
+}
+
+.informations-sobre-nos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 48px;
+}
+
+@media (max-width: 992px) {
+    .informations-sobre-nos {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+.informations-sobre-nos-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .informations-sobre-nos-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.informations-sobre-nos-logo-container {
+    width: 50%;
+}
+
+@media (max-width: 992px) {
+    .informations-sobre-nos-logo-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
