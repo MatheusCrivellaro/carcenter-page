@@ -143,6 +143,14 @@
 }
 
 .garantia-ver-mais div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 992px) {
+    .garantia-ver-mais div {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -208,7 +216,7 @@
 
 .item-opcional-ver-mais p {
     color: #fafafa;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     margin: 0;
     padding-left: 8px;

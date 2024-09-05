@@ -8,10 +8,11 @@ const NavBar = () => {
 
     const [isOpenOptions, setIsOpenOptions] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
+    const [widthAtual, setWidthAtual] = useState(window.innerWidth);
 
     const handleScroll = () => {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        if (scrollTop > 40) {
+        if (scrollTop > ((widthAtual>992) ? 40 : 20)) {
             setIsSticky(true);
         } else {
             setIsSticky(false);
@@ -20,6 +21,7 @@ const NavBar = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', () => setWidthAtual(window.innerWidth));
         return () => window.removeEventListener('scroll', handleScroll);
     }, [location.pathname])
 
