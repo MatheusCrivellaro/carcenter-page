@@ -1,7 +1,7 @@
 .carousel-ver-mais {
     position: relative;
-    margin-bottom: 48px;
     z-index: 0;
+    padding: 16px 8px;
 }
 
 .item-carousel-ver-mais {

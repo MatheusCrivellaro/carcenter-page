@@ -1,27 +1,50 @@
 .ver-mais {
     width: 100%;
-    padding: 48px 64px;
+}
+
+.ver-mais-container {
+    padding: 0 64px;
+}
+
+@media (max-width: 992px) {
+    .ver-mais-container {
+        padding: 0 24px;
+    }
 }
 
 .ver-mais-title {
-    display: flex;
-    justify-content: start;
-    width: 100%;
-    height: min-content ;
     border-bottom: #747487 1px solid;
-    padding-bottom: 16px;
+    display: flex;
+    align-items: end;
+    padding: 24px 0;
+}
+
+@media (max-width: 992px) {
+    .ver-mais-title {
+        display: block;
+    }
+}
+
+.ver-mais-title-modelo {
+    display: flex;
+    align-items: center;
 }
 
 .ver-mais-title img {
-    width: 50px;
-    height: 100%;
     margin-right: 16px;
+}
+
+@media (max-width: 992px) {
+    .ver-mais-title img {
+        margin-right: 8px;
+    }
 }
 
 .ver-mais-title h1 {
     font-size: 24px;
     font-weight: 400;
     color: #fafafa;
+    margin: 0;
 }
 
 .ver-mais-title h1 span {
@@ -39,30 +62,34 @@
     color: #dfab21;
     font-size: 18px;
     font-weight: 400;
-    display: flex;
-    align-items: end;
     margin-left: 48px;
+}
+
+@media (max-width: 992px) {
+    .ver-mais-title h3 {
+        margin-left: 0;
+    }
 }
 
 .ver-mais-title h3 span {
     font-weight: 700;
     font-size: 24px;
-    margin-left: 8px;
 }
 
 
 .informacoes-ver-mais {
     margin-top: 24px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 48px;
+    margin-bottom: 24px;
+}
+
+.ficha-tecnica-ver-mais h1 {
+    margin-bottom: 16px;
 }
 
 .ficha-tecnica-ver-mais h1 {
     font-size: 24px;
     color: #fafafa;
     font-weight: 600;
-    margin-bottom: 16px;
 }
 
 .ficha-tecnica-ver-mais p {
@@ -73,13 +100,20 @@
 }
 
 .item-ficha-tecnica-ver-mais {
-    display: flex;
     border: #4f4f63 1px solid;
     border-radius: 8px;
     background: #282833;
     font-size: 14px;
-    padding: 4px 16px;
     transition: 0.2s;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+}
+
+@media (max-width: 992px) {
+    .item-ficha-tecnica-ver-mais {
+        padding: 6px 12px;
+    }
 }
 
 .item-ficha-tecnica-ver-mais:hover {
@@ -92,21 +126,23 @@
     gap: 16px;
 }
 
+@media (max-width: 992px) {
+    .div-item-ficha-tecnica-ver-mais {
+        grid-template-columns: 1fr;
+    }
+}
+
 .icon-item-ficha-tecnica-ver-mais {
     color: #fafafa;
-    height: 100%;
     font-size: 18px;
     margin-right: 8px;
 }
 
 .garantia-ver-mais {
-    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .garantia-ver-mais div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
 }
 
 
@@ -119,69 +155,88 @@
 
 .garantia-ver-mais p{
     margin: 0;
-    display: flex;
     border: #4f4f63 1px solid;
     border-radius: 8px;
     font-weight: 300;
     background: #282833;
     font-size: 18px;
-    padding: 4px 16px;
     transition: 0.2s;
     color: #fafafa;
-    justify-content: center;
+    padding: 8px 12px;
 }
 
 .opcionais-ver-mais {
-    margin-top: 24px;
     border: #4f4f63 1px solid;
     border-radius: 8px;
     background: #282833;
-    padding: 24px;
+    padding: 16px;
 }
 
 .opcionais-ver-mais h1 {
-    width: 100%;
     border-bottom: #4f4f63 1px solid;
-    padding-bottom: 16px;
     color: #fafafa;
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 16px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 .itens-opcionais-ver-mais {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px 24px;
+    padding: 16px 16px 0 16px;
+}
+
+@media (max-width: 992px) {
+    .itens-opcionais-ver-mais {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
 }
 
 .item-opcional-ver-mais {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 992px) {
+    .item-opcional-ver-mais {
+        grid-template-columns: 1fr 6fr;
+    }
 }
 
 .item-opcional-ver-mais p {
-    margin: 0 0 0 8px;
     color: #fafafa;
     font-size: 14px;
     font-weight: 400;
+    margin: 0;
+    padding-left: 8px;
 }
 
 .icon-item-opcional-ver-mais {
+    width: 16px;
+    height: 16px;
     color: #fafafa;
 }
 
 .caracteristicas-ver-mais {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 24px;
+    margin-top: 16px;
+}
+
+@media (max-width: 992px) {
+    .caracteristicas-ver-mais {
+        grid-template-columns: 1fr;
+    }
 }
 
 .item-caracteristica-ver-mais {
-    padding: 16px 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 16px 0;
     transition: 0.3s;
 }
 
@@ -192,6 +247,15 @@
 .item-caracteristica-centro {
     border-left: #4f4f63 1px solid;
     border-right: #4f4f63 1px solid;
+}
+
+@media (max-width: 992px) {
+    .item-caracteristica-centro {
+        border-top: #4f4f63 1px solid;
+        border-bottom: #4f4f63 1px solid;
+        border-left: 0;
+        border-right: 0;
+    }
 }
 
 .item-caracteristica-ver-mais p {
@@ -215,7 +279,6 @@
     color: #fafafa;
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 16px;
 }
 
 .mais-informacoes-ver-mais p {
@@ -228,6 +291,12 @@
 .div-informations-sticky-ver-mais {
     display: grid;
     grid-template-columns: 4fr 1fr;
+}
+
+@media (max-width: 992px) {
+    .div-informations-sticky-ver-mais {
+        grid-template-columns: 1fr;
+    }
 }
 
 .div-sticky-ver-mais {
@@ -302,4 +371,10 @@
 
 .informations-content-ver-mais {
     padding-right: 48px;
+}
+
+@media (max-width: 992px) {
+    .informations-content-ver-mais {
+        padding-right: 0;
+    }
 }
