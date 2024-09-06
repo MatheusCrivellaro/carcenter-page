@@ -5,7 +5,7 @@ import {useRef} from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {SwiperOptions} from "swiper/types";
 import {MdArrowBackIosNew, MdArrowForwardIos} from "react-icons/md";
-import {CCard, CPlaceholder} from "@coreui/react";
+import {CCardText, CPlaceholder} from "@coreui/react";
 
 type props = {
     marcas: string[],
@@ -42,10 +42,10 @@ const CarouselCategorias = ({ marcas, handleSelectedMarca, categoriasPerView, is
                     isLoading ?
                         Array.from({ length: 12 }).map(() => (
                             <SwiperSlide>
-                                <CCard className="categorias-card-placehoader">
+                                <CPlaceholder as={CCardText} animation="wave" className="categorias-card-placehoader">
                                     <CPlaceholder color="secondary" xs={3} />
                                     <CPlaceholder color="secondary" xs={5} />
-                                </CCard>
+                                </CPlaceholder>
                             </SwiperSlide>
                         ))
                         :
