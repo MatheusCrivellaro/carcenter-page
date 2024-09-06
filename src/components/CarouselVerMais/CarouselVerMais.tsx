@@ -4,6 +4,7 @@ import {useEffect, useRef, useState} from "react";
 import {MdOutlineArrowBackIos, MdOutlineArrowForwardIos} from "react-icons/md";
 import {Fancybox} from "@fancyapps/ui";
 import {Foto} from "../../interfaces/Foto.ts";
+
 type props = {
     images: Foto[]
 }

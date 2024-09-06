@@ -2,8 +2,8 @@ import './ButtonFilterOrdenation.css'
 
 type props = {
     handle: (ordenation: string) => void,
-    classeButton: string,
-    classeList: string
+    classeButton?: string,
+    classeList?: string
 }
 
 const ButtonFilterOrdenation = ({ handle, classeButton, classeList }:props) => {

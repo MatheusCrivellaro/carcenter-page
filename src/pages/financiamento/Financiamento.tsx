@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { FaArrowDown } from "react-icons/fa6";
+import {useRef} from "react";
+import {FaArrowDown} from "react-icons/fa6";
 import img_financiamento_1 from "../../../public/1_Mesa de trabajo 1.png";
 import img_financiamento_2 from "../../../public/2.png";
 import img_financiamento_3 from "../../../public/3.png";

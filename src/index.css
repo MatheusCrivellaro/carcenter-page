@@ -1,0 +1,54 @@
+:root {
+    /*Cores*/
+    --white: #fafafa;
+    --white-selected: #dfdfdf;
+    --black: #121217;
+    --secondary-black: #282833;
+    --secondary-black-selected: #3F3F50;
+    --primary-color: #dfab21;
+    --primary-selected: #C28800;
+
+    --border-color: #474759;
+    --placeholder-color: #afb1c3;
+
+    /*Fontes*/
+    --font-size-sm: 12px;
+    --font-size-md: 14px;
+    --font-size: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+
+    /*Borda arrecondada*/
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+
+    /*Espaços*/
+    --spacing-smx: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    --spacing-xxxl: 64px;
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    transition: 0.2s;
+}
+
+.button-primary:hover {
+    background-color: var(--primary-selected);
+}
+
+.button-black {
+    background-color: var(--secondary-black);
+    transition: 0.2s;
+}
+
+.button-black:hover {
+    background-color: var(--secondary-black-selected);
+}

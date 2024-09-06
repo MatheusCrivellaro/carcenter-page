@@ -31,14 +31,15 @@ const Inicio = () => {
 
     return (
         isLoading ?
-            <SpinnerLoading />
+            <div className="inicio-spinner">
+                <SpinnerLoading />
+            </div>
             :
             <div className="inicio">
                 <ButtonSuspense/>
                 <CarouselBanner/>
                 <div className="div-carousel-categorias">
-                    <CarouselCategorias marcas={marcas} handleSelectedMarca={handleSelectedMarca}
-                                        categoriasPerView={widthAtual < 992 ? 3 : 9}/>
+                    <CarouselCategorias marcas={marcas} handleSelectedMarca={handleSelectedMarca} categoriasPerView={widthAtual > 992 ? 9 : 3}/>
                 </div>
 
                 <div className="veiculos-destaque-div-inicio" id="veiculos-destaque">

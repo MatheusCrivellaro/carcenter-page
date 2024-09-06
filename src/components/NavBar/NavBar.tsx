@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { useEffect, useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import {motion} from 'framer-motion';
+import {useEffect, useState} from "react";
+import {FaWhatsapp} from "react-icons/fa";
+import {NavLink} from "react-router-dom";
 import './NavBar.css';
 
 const NavBar = () => {
@@ -12,7 +12,7 @@ const NavBar = () => {
 
     const handleScroll = () => {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        if (scrollTop > ((widthAtual>992) ? 40 : 20)) {
+        if (scrollTop > ((widthAtual>992) ? 40 : 30)) {
             setIsSticky(true);
         } else {
             setIsSticky(false);

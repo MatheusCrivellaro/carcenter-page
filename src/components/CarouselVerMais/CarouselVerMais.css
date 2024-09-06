@@ -31,18 +31,20 @@
 
 .button-next-carousel-ver-mais {
     position: absolute;
-    right: -5%;
+    right: 0;
     height: 100%;
     top: 0;
     z-index: 1;
+    padding-right: 16px;
 }
 
 .button-prev-carousel-ver-mais {
     position: absolute;
-    left: -5%;
+    left: 0;
     top: 0;
     height: 100%;
     z-index: 99;
+    padding-left: 16px;
 }
 
 .button-arrow-carousel-ver-mais {
@@ -50,6 +52,12 @@
     font-size: 60px;
     background: transparent;
     border: 0;
+}
+
+@media (max-width: 992px) {
+    .button-arrow-carousel-ver-mais {
+        font-size: 45px;
+    }
 }
 
 

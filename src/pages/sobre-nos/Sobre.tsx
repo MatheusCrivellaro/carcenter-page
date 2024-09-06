@@ -1,5 +1,5 @@
-import { FaWhatsapp } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa6";
+import {FaWhatsapp} from "react-icons/fa";
+import {FaPhone} from "react-icons/fa6";
 import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
 import './Sobre.css';
 
