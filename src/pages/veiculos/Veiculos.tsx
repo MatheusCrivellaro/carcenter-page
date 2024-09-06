@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useRef, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import CardVeiculoEstoque from "../../components/CardVeiculoEstoque/CardVeiculoEstoque.tsx";
 import CarouselCategorias from "../../components/CarouselCategorias/CarouselCategorias.tsx";
 import useCollects from "../../hooks/useCollects.tsx";
@@ -23,7 +23,7 @@ const Veiculos = () => {
     // const location = useLocation()
     // const { state } = location
 
-    const searchRef = useRef<HTMLInputElement>(null);
+    // const searchRef = useRef<HTMLInputElement>(null);
 
     const {data, isLoading} = useGetStock();
     const {marcas, cores, cambios, carrocerias, combustiveis} = useCollects(data)
