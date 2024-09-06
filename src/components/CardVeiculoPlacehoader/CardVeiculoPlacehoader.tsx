@@ -1,11 +1,19 @@
 import './CardVeiculoPlacehoader.css'
-import {CButton, CCard, CCardBody, CCardImage, CCardText, CCardTitle, CPlaceholder} from "@coreui/react";
+import {CButton, CCard, CCardBody, CCardText, CCardTitle, CPlaceholder} from "@coreui/react";
+import {useEffect, useState} from "react";
 
 type props = {
     quantidade: number
 }
 
 const CardVeiculoPlacehoader = ({ quantidade }: props) => {
+
+    const [widthAtual, setWidthAtual] = useState(window.innerWidth);
+
+    useEffect(() => {
+        window.addEventListener('resize', () => setWidthAtual(window.innerWidth));
+    }, []);
+
     return (
         <>
             {Array.from({ length: quantidade }).map((_, i) => (
@@ -17,10 +25,8 @@ const CardVeiculoPlacehoader = ({ quantidade }: props) => {
                     }}
                     key={i}
                 >
-                    <CCardImage style={{ borderRadius: "8px 8px 0 0" }} as="svg" orientation="top" width="100%" height="30vh" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title><rect width="100%" height="35vh" fill="#3F3F50"></rect>
-                    </CCardImage>
-                    <CCardBody style={{ background: "#282833", borderRadius: "0 0 8px 8px" }}>
+                    <CPlaceholder animation="wave" style={{ background:  "#3F3F50", width: "100%", height: widthAtual > 992 ? "35vh" : "30vh", borderRadius: '8px 8px 0 0'}} />
+                    <CCardBody style={{background: "#282833", borderRadius: "0 0 8px 8px" }}>
                         <CPlaceholder as={CCardTitle} animation="glow" xs={8}>
                             <CPlaceholder xs={6} style={{ background: "#fafafa"}}/>
                         </CPlaceholder>
