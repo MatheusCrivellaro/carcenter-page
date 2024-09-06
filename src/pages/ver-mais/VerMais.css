@@ -32,6 +32,7 @@
 
 .ver-mais-title img {
     margin-right: 16px;
+    max-height: 40px;
 }
 
 @media (max-width: 992px) {
@@ -193,6 +194,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 16px 16px 0 16px;
+    gap: 16px;
 }
 
 @media (max-width: 992px) {
@@ -203,9 +205,8 @@
 }
 
 .item-opcional-ver-mais {
-    display: grid;
-    grid-template-columns: 1fr 10fr;
-    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 992px) {
@@ -223,7 +224,7 @@
 }
 
 .icon-item-opcional-ver-mais {
-    width: 16px;
+    min-width: 16px;
     height: 16px;
     color: #fafafa;
 }
