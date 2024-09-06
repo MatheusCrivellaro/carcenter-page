@@ -1,20 +1,18 @@
 import './FormConcluido.css'
-import {useNavigate} from "react-router-dom";
-import {useEffect, useRef} from "react";
+import {useLocation, useNavigate} from "react-router-dom";
+import {useEffect} from "react";
 
 const FormConcluido = () => {
 
     const navigate = useNavigate();
-
-    const formConcluidoRef = useRef<HTMLDivElement>(null);
+    const { pathname } = useLocation();
 
     useEffect(() => {
-        if (formConcluidoRef.current)
-            formConcluidoRef.current.scrollIntoView({ behavior: 'smooth' });
-    }, []);
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     return (
-        <div className="formConcluido" ref={formConcluidoRef}>
+        <div className="formConcluido">
             <h1>Obrigado por entrar em contato conosco!</h1>
             <h2>Já recebemos sua proposta e em breve entraremos em contato para continuar o processo!</h2>
             <button onClick={() => navigate("/")}>

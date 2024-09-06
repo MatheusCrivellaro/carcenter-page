@@ -1,4 +1,4 @@
-import {useRef} from "react";
+import {useEffect, useRef} from "react";
 import {FaArrowDown} from "react-icons/fa6";
 import img_financiamento_1 from "../../../public/1_Mesa de trabajo 1.png";
 import img_financiamento_2 from "../../../public/2.png";
@@ -14,6 +14,7 @@ import CardPassoFinanciamento from "../../components/CardPassoFinanciamento/Card
 import useGetLogoEmpresas from "../../hooks/useGetLogoEmpresas.tsx";
 import './Financiamento.css';
 import FormFinanciamento from "../../components/FormFinanciamento/FormFinanciamento.tsx";
+import {useLocation} from "react-router-dom";
 
 const Financiamento = () => {
 
@@ -37,6 +38,12 @@ const Financiamento = () => {
         { name: "Santander", url: "santander.com.br", img: "" },
         { name: "Safra", url: "safra.com.br", img: "" },
     ];
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     return (
         <div className="financiamento">

@@ -168,7 +168,8 @@ const Veiculos = () => {
             applyFilter()
         }
         window.addEventListener('resize', () => setWidthAtual(window.innerWidth));
-    }, [data, filters, ordenation]);
+        window.scrollTo(0, 0);
+    }, [data, filters, ordenation, location.pathname]);
 
     return (
         <div>

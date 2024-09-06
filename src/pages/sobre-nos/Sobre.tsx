@@ -2,8 +2,17 @@ import {FaWhatsapp} from "react-icons/fa";
 import {FaPhone} from "react-icons/fa6";
 import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
 import './Sobre.css';
+import {useEffect} from "react";
+import {useLocation} from "react-router-dom";
 
 const Sobre = () => {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return (
         <div className="sobre-nos">
             <ButtonSuspense />

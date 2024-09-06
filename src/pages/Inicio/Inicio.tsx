@@ -1,5 +1,5 @@
 import './Inicio.css'
-import {Link, useNavigate} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import AvaliacaoCard from "../../components/AvaliacaoCard/AvaliacaoCard.tsx";
 import {useGetStock} from "../../hooks/useGetStock.tsx";
 import {Vehicle} from "../../interfaces/Vehicle.ts";
@@ -18,6 +18,8 @@ const Inicio = () => {
     const [destaques, setDestaques] = useState<Vehicle[]>()
     const [widthAtual, setWidthAtual] = useState(window.innerWidth);
 
+    const { pathname } = useLocation();
+
     const navigate = useNavigate();
 
     const handleSelectedMarca = (selectedMarca: string) => {
@@ -27,7 +29,8 @@ const Inicio = () => {
     useEffect(() => {
         setDestaques(data?.slice(0, 4))
         window.addEventListener('resize', () => setWidthAtual(window.innerWidth));
-    }, [data]);
+        window.scrollTo(0, 0);
+    }, [data, pathname]);
 
     return (
         isLoading ?

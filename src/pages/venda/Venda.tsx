@@ -4,8 +4,16 @@ import cumprimento from "../../../public/cumprimento.jpeg"
 import analise_carro from "../../../public/analise-carro.jpeg"
 import conversa from "../../../public/conversa.jpeg"
 import FormDadosClienteVenda from "../../components/FormDadosClienteVenda/FormDadosClienteVenda.tsx";
+import {useEffect} from "react";
+import {useLocation} from "react-router-dom";
 
 const Venda = () => {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     return (
         <div className="venda">

@@ -57,7 +57,8 @@ const VerMais = () => {
 
     useEffect(() => {
         window.addEventListener('resize', () => setWidthAtual(window.innerWidth));
-    }, []);
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
 
     return (
         <div className="ver-mais">
