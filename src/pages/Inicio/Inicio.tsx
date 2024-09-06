@@ -39,7 +39,7 @@ const Inicio = () => {
                 <ButtonSuspense/>
                 <CarouselBanner/>
                 <div className="div-carousel-categorias">
-                    <CarouselCategorias marcas={marcas} handleSelectedMarca={handleSelectedMarca} categoriasPerView={widthAtual > 992 ? 9 : 3}/>
+                    <CarouselCategorias marcas={marcas} handleSelectedMarca={handleSelectedMarca} categoriasPerView={widthAtual > 992 ? 9 : 3} isLoading={isLoading}/>
                 </div>
 
                 <div className="veiculos-destaque-div-inicio" id="veiculos-destaque">
