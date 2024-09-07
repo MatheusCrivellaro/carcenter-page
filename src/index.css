@@ -1,12 +1,17 @@
 :root {
     /*Cores*/
-    --white: #fafafa;
-    --white-selected: #dfdfdf;
-    --black: #121217;
-    --secondary-black: #282833;
-    --secondary-black-selected: #3F3F50;
+    --background-color: #121217;
+    --secondary-background-color: #282833;
+    --secondary-background-color-selected: #3F3F50;
+    --contrast-color: #fafafa;
+    --contrast-color-selected: #fafafa;
     --primary-color: #dfab21;
     --primary-selected: #C28800;
+    --secondary-color: #9B9B9B;
+    --text-color: #fafafa;
+
+    --shadow-primary: rgb(223, 171, 33, 0.6) 0 0 10px;
+    --shadow-white: rgb(250, 250, 250, 0.6) 0 0 10px;
 
     --border-color: #474759;
     --placeholder-color: #afb1c3;

@@ -20,7 +20,7 @@
 .text-banner-div-inicio h1 {
     font-size: 48px;
     font-weight: bold;
-    color: #121217;
+    color: var(--background-color);
 }
 
 .text-banner-div-inicio h1 span {
@@ -34,7 +34,7 @@
 }
 
 .text-banner-div-inicio h2 span{
-    color: #C28800;
+    color: var(--primary-color);
 }
 
 .button-banner-inicio {
@@ -46,14 +46,14 @@
 }
 
 .button-banner-blue {
-    color: #FAFAFA;
+    color: var(--text-color);
     background: linear-gradient(90deg, #00ACFF, #70D1FF);
 }
 
 .button-banner-grey {
     border: 1px solid #D1D1DB;
-    background-color: #FAFAFA;
-    color: #121217;
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
 
 .div-buttons-banner-inicio {
@@ -61,7 +61,7 @@
 }
 
 .div-carousel-categorias {
-    background: #121217;
+    background: var(--background-color);
     padding: 24px 48px;
     border-bottom: #3F3F50 3px solid;
 }
@@ -82,7 +82,7 @@
     max-width: 100vw;
     padding: 32px 48px 24px 48px;
     display: flex;
-    background: #121217;
+    background: var(--background-color);
 }
 
 @media (min-width: 1600px) {
@@ -93,7 +93,7 @@
 
 .veiculos-destaque-div-inicio {
     padding: 24px 48px;
-    background: #121217;
+    background: var(--background-color);
     margin: 0 12px;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .veiculos-destaque-div-inicio h1 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 24px;
@@ -137,7 +137,7 @@
 
 .button-veiculos-destaque-inicio {
     background-color: #4f4f63;
-    color: #FAFAFA;
+    color: var(--text-color);
     font-size:  16px;
     text-decoration: none;
     padding: 12px 32px;
@@ -152,7 +152,7 @@
 .avaliacoes-div-inicio {
     padding: 48px;
     display: flex;
-    background: #dfab21;
+    background: var(--primary-color);
 }
 
 @media (min-width: 1600px) {
@@ -186,7 +186,7 @@
 }
 
 .avaliacoes-cards-div-inicio h1 {
-    color: #121217;
+    color: var(--background-color);
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 24px;

@@ -32,7 +32,7 @@
 }
 
 .venda-form h3 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: 500;
 }
@@ -48,7 +48,7 @@
 }
 
 .venda-form h1 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 8px;
@@ -61,7 +61,7 @@
 }
 
 .venda-form h2 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 18px;
     font-weight: 400;
 }
@@ -84,7 +84,7 @@
 }
 
 .venda-como-funciona-title {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 32px;
     font-weight: 700;
     margin-top: 24px;
@@ -130,7 +130,7 @@
 }
 
 .container-img-passo-venda h1 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 24px;
     font-weight: 700;
 }
@@ -143,7 +143,7 @@
 }
 
 .container-img-passo-venda p {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 18px;
     font-weight: 400;
     margin: 0;
@@ -188,7 +188,7 @@
 }
 
 .container-img-passo-venda-contrario h1 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 24px;
     font-weight: 700;
 }
@@ -201,7 +201,7 @@
 }
 
 .container-img-passo-venda-contrario p {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 18px;
     font-weight: 400;
     margin: 0;

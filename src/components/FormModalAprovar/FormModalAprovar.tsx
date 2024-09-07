@@ -23,10 +23,6 @@ const FormModalAprovar = ({ handleClose }:props) => {
 
     const navigate = useNavigate();
 
-    // const textFormater = (nome: string, dados: string, telefone: string, isWhatsapp: boolean, email: string, cpf?: string, data?: string) => {
-    //     return nome + "\n" + telefone + (isWhatsapp ? " - WhatsApp" : "") + "\n" + email + (cpf !== undefined && cpf ? "\n" + cpf : "") + (data !== undefined && data ? "\n" + data : "") + "\n" + dados
-    // }
-
     const onSubmit = () => {
         navigate("/form-concluido")
     }

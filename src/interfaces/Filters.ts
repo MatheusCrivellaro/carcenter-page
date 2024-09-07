@@ -6,5 +6,6 @@ export interface Filters {
     cambio?: string
     precoMax?: string
     precoMin?: string
-    ordenacao?: string
+    ordenacao?: string,
+    search?: string
 }

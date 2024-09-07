@@ -11,12 +11,12 @@
 .sobre-nos h1 {
     font-size: 24px;
     font-weight: 700;
-    color: #fafafa;
+    color: var(--text-color);
     margin-bottom: 24px;
 }
 
 .sobre-nos p {
-    color: #fafafa;
+    color: var(--text-color);
     font-weight: 400;
     margin-bottom: 48px;
 }
@@ -44,7 +44,7 @@
 
 .sobre-nos h2 {
     font-size: 20px;
-    color: #fafafa;
+    color: var(--text-color);
     font-weight: 400;
     text-align: center;
 }
@@ -58,7 +58,7 @@
 }
 
 .wpp-button-atendimento a{
-    color: #fafafa;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .div-content-atendimento {
-    background-color: #282833;
+    background-color: var(--secondary-background-color);
     padding: 48px;
     border-radius: 12px;
     display: flex;

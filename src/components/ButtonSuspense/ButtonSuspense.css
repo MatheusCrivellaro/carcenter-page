@@ -19,7 +19,7 @@
 }
 
 .button-suspense {
-    background-color: #282833;
+    background-color: var(--secondary-background-color);
     width: 60px;
     height: 60px;
     border-radius: 8px 0 0 8px;
@@ -29,7 +29,7 @@
 
 @media (max-width: 992px) {
     .button-suspense {
-        background-color: #282833;
+        background-color: var(--secondary-background-color);
         width: 50px;
         height: 50px;
         border-radius: 8px 0 0 8px;

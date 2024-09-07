@@ -21,7 +21,7 @@
 }
 
 .title-card-passo-financiamento {
-    color: #fafafa;
+    color: var(--text-color);
 }
 
 .title-card-passo-financiamento-pronto {
@@ -35,7 +35,7 @@
 }
 
 .passos-financiamento-card p {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 12px;
     font-weight: 400;
     text-align: center;

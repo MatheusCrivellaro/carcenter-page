@@ -6,7 +6,7 @@
     padding: 8px;
     flex: none;
     transition: 0.2s;
-    background: #fafafa;
+    background: var(--contrast-color);
 }
 
 .categorias-card-inicio:hover {
@@ -20,7 +20,7 @@
 .title-card-categoria {
     font-size: 16px;
     height: 30%;
-    color: #121217;
+    color: var(--background-color);
 }
 
 .div-itens-card-categoria {

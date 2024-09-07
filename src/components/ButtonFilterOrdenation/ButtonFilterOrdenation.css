@@ -3,8 +3,8 @@
     width: 100%;
     padding: 8px 0;
     border: none;
-    background: #282833;
-    color: #fafafa;
+    background: var(--secondary-background-color);
+    color: var(--text-color);
     font-weight: 400;
     font-size: 16px;
     border-radius: 8px;
@@ -17,20 +17,20 @@
 
 .button-ordenar-menu-informations-list-veiculos {
     width: max-content;
-    background: #282833;
+    background: var(--secondary-background-color);
 }
 
 .button-ordenar-menu-informations-list-veiculos a{
-    color: #fafafa;
+    color: var(--text-color);
 }
 
 .button-ordenar {
     border: 0;
     border-radius: 8px;
     padding: 4px 24px;
-    color: #FAFAFA;
+    color: var(--text-color);
     font-weight: 500;
-    background-color: #282833;
+    background-color: var(--secondary-background-color);
     width: 100%;
     margin-top: 12px;
     font-size: 14px;
@@ -43,11 +43,11 @@
 
 .button-ordenar-menu {
     width: 100%;
-    background: #282833;
+    background: var(--secondary-background-color);
 }
 
 .button-ordenar-menu a {
-    color: #FAFAFA;
+    color: var(--text-color);
 }
 
 .button-filter-ordenation {

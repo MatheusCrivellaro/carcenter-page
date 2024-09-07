@@ -1,5 +1,5 @@
 .informations-card-inicio {
-    background-color: #282833;
+    background-color: var(--secondary-background-color);
     padding: 16px 24px;
     border-radius: 12px;
 }
@@ -12,10 +12,10 @@
     font-size: 16px;
     font-weight: bold;
     margin: 12px 0;
-    color: #fafafa;
+    color: var(--text-color);
 }
 
 .informations-card-inicio p {
     font-size: 12px;
-    color: #fafafa;
+    color: var(--text-color);
 }

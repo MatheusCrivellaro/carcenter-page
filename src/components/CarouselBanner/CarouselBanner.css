@@ -7,7 +7,7 @@
 .div-banners-carousel {
     width: 100%;
     height: auto;
-    background-color: #fafafa;
+    background-color: var(--text-color);
 }
 
 .div-banners-carousel img {
@@ -29,7 +29,7 @@
     border: none;
     background: none;
     font-size: 48px;
-    color: #dfab21;
+    color: var(--primary-color);
     border-radius: 8px;
     height: 40px;
     width: 40px;

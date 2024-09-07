@@ -1,5 +1,5 @@
 .card-veiculo-estoque {
-    background-color: #282833;
+    background-color: var(--secondary-background-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,7 +18,7 @@
 }
 
 .card-veiculo-estoque h4 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: bold;
     margin: 0;
@@ -30,7 +30,7 @@
 }
 
 .card-veiculo-estoque h4 span {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 14px;
     font-weight: 500;
     margin: 0;
@@ -39,27 +39,27 @@
 .card-veiculo-estoque h2 {
     font-weight: normal;
     font-size: 12px;
-    color: #fafafa;
+    color: var(--text-color);
     margin-bottom: 12px;
 }
 
 .card-veiculo-estoque h3 {
     font-weight: normal;
     font-size: 14px;
-    color: #fafafa;
+    color: var(--text-color);
     margin-bottom: 12px;
 }
 
 .card-veiculo-estoque h3 span {
     font-weight: 700;
     font-size: 16px;
-    color: #fafafa;
+    color: var(--text-color);
 }
 
 .ano-km-div-card-veiculo-estoque {
     display: flex;
     justify-content: space-between;
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 12px;
     font-weight: 400;
 }
@@ -81,7 +81,7 @@
     background: #4f4f63;
     border-radius: 8px;
     text-decoration: none;
-    color: #FAFAFA;
+    color: var(--text-color);
     font-size: 14px;
     font-weight: 400;
     transition: 0.2s;

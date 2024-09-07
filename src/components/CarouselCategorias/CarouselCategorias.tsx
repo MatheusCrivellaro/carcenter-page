@@ -40,8 +40,8 @@ const CarouselCategorias = ({ marcas, handleSelectedMarca, categoriasPerView, is
             >
                 {
                     isLoading ?
-                        Array.from({ length: 12 }).map(() => (
-                            <SwiperSlide>
+                        Array.from({ length: 12 }).map((_, index) => (
+                            <SwiperSlide key={index + "carousel-categoria"}>
                                 <CPlaceholder as={CCardText} animation="wave" className="categorias-card-placehoader">
                                     <CPlaceholder color="secondary" xs={3} />
                                     <CPlaceholder color="secondary" xs={5} />

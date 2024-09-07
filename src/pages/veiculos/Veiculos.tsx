@@ -16,14 +16,15 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {motion} from "framer-motion";
 import CardVeiculoPlacehoader from "../../components/CardVeiculoPlacehoader/CardVeiculoPlacehoader.tsx";
+import {useLocation} from "react-router-dom";
 
 
 const Veiculos = () => {
 
-    // const location = useLocation()
-    // const { state } = location
-
     // const searchRef = useRef<HTMLInputElement>(null);
+
+    const location = useLocation();
+    const marcaSelecionada = location.state?.marcaSelecionada || 'todos';
 
     const {data, isLoading} = useGetStock();
     const {marcas, cores, cambios, carrocerias, combustiveis} = useCollects(data)
@@ -118,7 +119,8 @@ const Veiculos = () => {
                     (filters.carroceria === undefined || filters.carroceria === "todos" || vehicle.carroceria.toLowerCase() === filters.carroceria) &&
                     (filters.cambio === undefined || filters.cambio === "todos" || vehicle.cambio.toLowerCase() === filters.cambio) &&
                     (filters.precoMax === undefined || filters.precoMax === "" || extractNumbers(vehicle.precoVenda) < extractNumbers(filters.precoMax)) &&
-                    (filters.precoMin === undefined || filters.precoMin === "" || extractNumbers(vehicle.precoVenda) > extractNumbers(filters.precoMin))
+                    (filters.precoMin === undefined || filters.precoMin === "" || extractNumbers(vehicle.precoVenda) > extractNumbers(filters.precoMin)) &&
+                    (filters.search === undefined || filters.search === "" || vehicle.marca.includes(filters.search) || vehicle.modelo.includes(filters.search))
                 );
             });
             result = sortVehicles(result, ordenation !== "" ? ordenation : filters.ordenacao);
@@ -162,14 +164,27 @@ const Veiculos = () => {
         })
     }
 
+    const getFiltrosAtivos = (): number => {
+        return Object.values(filters).filter(value => {
+            return value ? (value !== 'todos' && value !== '' && value !== 'Todos') : false
+        }).length;
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', () => setWidthAtual(window.innerWidth));
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     useEffect(() => {
         if (data) {
             setFilteredVehicles(data);
             applyFilter()
         }
-        window.addEventListener('resize', () => setWidthAtual(window.innerWidth));
-        window.scrollTo(0, 0);
-    }, [data, filters, ordenation, location.pathname]);
+    }, [applyFilter, data, marcaSelecionada, updateFilter]);
+
+    useEffect(() => {
+        updateFilter('marca', marcaSelecionada, setSelectedMarcas)
+    }, []);
 
     return (
         <div>
@@ -206,9 +221,14 @@ const Veiculos = () => {
                 <div className="veiculos-cards">
                     <CarouselCategorias marcas={marcas} handleSelectedMarca={handleSelectedMarca} isLoading={isLoading}/>
                     <div className="veiculos-cards-title">
-                        <input type="text" placeholder="Busque por marca e modelo" onChange={(e) => setSearchName(e.target.value)} />
+                        <input type="text" placeholder="Busque por marca e modelo" onChange={(e) => updateFilter('search', e.target.value, setSearchName)} />
                         <div className="veiculos-cards-title-buttons">
-                            <button className="button-primary" onClick={() => setIsOpenFilter(!isOpenFilter)}>Filtrar</button>
+                            <button className="button-primary veiculos-cards-title-buttons-filter" onClick={() => setIsOpenFilter(!isOpenFilter)}>
+                                {getFiltrosAtivos() === 0 ? <></> :
+                                    <span className="veiculos-cards-title-buttons-filter-count">{getFiltrosAtivos()}</span>
+                                }
+                                <span>Filtrar</span>
+                            </button>
                             <ButtonFilterOrdenation handle={setOrdenation} classeButton="button-black"/>
                         </div>
                     </div>
@@ -218,8 +238,8 @@ const Veiculos = () => {
                             isLoading ?
                                 <CardVeiculoPlacehoader quantidade={8} />
                                 :
-                                filteredVehicles.map((veiculo) => (
-                                    <CardVeiculoEstoque veiculo={veiculo} />
+                                filteredVehicles.map((veiculo, index) => (
+                                    <CardVeiculoEstoque key={index + "veiculos"} veiculo={veiculo} />
                                 ))
                         }
                     </div>

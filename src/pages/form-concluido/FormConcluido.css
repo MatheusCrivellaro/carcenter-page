@@ -10,20 +10,20 @@
 }
 
 .formConcluido h1 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 32px;
     font-weight: 700;
 }
 
 .formConcluido h2 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 18px;
     font-weight: 400;
 }
 
 .formConcluido button {
-    background-color: #dfab21;
-    color: #fafafa;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     font-size: 16px;
     font-weight: 700;
     border: none;
@@ -34,5 +34,5 @@
 }
 
 .formConcluido button:hover {
-    background: #C28800;
+    background: var(--primary-selected);
 }

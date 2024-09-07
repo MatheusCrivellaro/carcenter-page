@@ -2,7 +2,7 @@
 .avaliacoes-card-inicio {
     padding: 32px;
     margin-bottom: 16px;
-    background-color: #121217;
+    background-color: var(--background-color);
     height: 100%;
     border-radius: 8px;
 }
@@ -15,7 +15,7 @@
 }
 
 .title-card-avaliacoes-inicio h1 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: bold;
     margin: 0 8px;
@@ -27,7 +27,7 @@
 }
 
 .avaliacoes-card-inicio h2 {
-    color: #fafafa;
+    color: var(--text-color);
     font-size: 20px;
     font-weight: 300;
     line-height: 125%;

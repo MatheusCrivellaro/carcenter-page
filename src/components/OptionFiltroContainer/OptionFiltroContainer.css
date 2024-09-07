@@ -1,5 +1,5 @@
 .div-options-filtro-veiculos {
-    border-bottom: #282833 1px solid;
+    border-bottom: var(--secondary-background-color) 1px solid;
 }
 
 .margin-div-options-filtro-veiculos {
@@ -8,7 +8,7 @@
 
 .div-options-filtro-veiculos h1 {
     font-size: 14px;
-    color: #FAFAFA;
+    color: var(--text-color);
     margin-bottom: 16px;
 }
 
@@ -18,7 +18,7 @@
 
 .div-options-filtro-veiculos h1 {
     font-size: 16px;
-    color: #FAFAFA;
+    color: var(--text-color);
     margin: 0;
 }
 
@@ -26,7 +26,7 @@
     appearance: none;
     width: 15px;
     height: 15px;
-    border: 2px solid #dfab21;
+    border: 2px solid var(--primary-color);
     border-radius: 50%;
     margin-right: 12px;
     outline: none;
@@ -35,7 +35,7 @@
 }
 
 input[type="radio"]:checked {
-    background: #dfab21;
+    background: var(--primary-color);
     width: 15px;
     height: 15px;
     margin-right: 16px;
@@ -44,13 +44,13 @@ input[type="radio"]:checked {
 input[type="radio"]:checked + label {
     font-size: 18px;
     font-weight: 600;
-    color: #dfab21;
+    color: var(--primary-color);
 }
 
 .div-options-filtro-veiculos label {
     font-size: 14px;
     margin-right: 12px;
-    color: #FAFAFA;
+    color: var(--text-color);
     font-weight: 300;
 }
 
@@ -70,7 +70,7 @@ input[type="radio"]:checked + label {
 }
 
 .icon-button-collapse-filtros-option {
-    color: #dfab21;
+    color: var(--primary-color);
     transition: 0.2s;
 }
 

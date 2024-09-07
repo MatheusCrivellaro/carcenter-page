@@ -17,7 +17,7 @@
 }
 
 .pagination-button.active {
-    background-color: #dfab21;
+    background-color: var(--primary-color);
     transform: scale(1.1);
 }
 

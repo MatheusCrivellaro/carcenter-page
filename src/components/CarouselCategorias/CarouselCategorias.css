@@ -16,7 +16,7 @@
     border: none;
     background: none;
     font-size: 32px;
-    color: #dfab21;
+    color: var(--primary-color);
     border-radius: 8px;
     height: 40px;
     width: 40px;
@@ -50,5 +50,5 @@
     padding: 8px;
     flex: none;
     transition: 0.2s;
-    background: #282833;
+    background: var(--secondary-background-color);
 }

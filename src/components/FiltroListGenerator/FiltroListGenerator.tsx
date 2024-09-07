@@ -8,7 +8,7 @@ type props = {
 const FiltroListGenerator = ({ filtros }: props) => {
     return (
         <>
-            {filtros.map(filtro => <OptionFiltroContainer title={filtro.title} value={filtro.value} group={filtro.group} handle={filtro.handle} todos={filtro.todos} selected={filtro.selected} />)}
+            {filtros.map((filtro, index) => <OptionFiltroContainer key={index + "filtro"} title={filtro.title} value={filtro.value} group={filtro.group} handle={filtro.handle} todos={filtro.todos} selected={filtro.selected} />)}
         </>
     )
 }
