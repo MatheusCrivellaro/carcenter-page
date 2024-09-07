@@ -7,6 +7,7 @@ import {TbFaceId} from "react-icons/tb";
 import {MdPhone} from "react-icons/md";
 import {LuMail} from "react-icons/lu";
 import {GoArrowRight} from "react-icons/go";
+import {IMask, IMaskInput} from "react-imask";
 
 type FormData = {
     dados: string
@@ -36,48 +37,6 @@ const FormFinanciamento = () => {
         navigate("/form-concluido")
     }
 
-    const formatCpf = (value: string) => {
-        value = value.replace(/\D/g, '');
-        if (value.length > 11)
-            value = value.slice(0, 11);
-        return value
-            .replace(/(\d{3})(\d)/, '$1.$2')
-            .replace(/(\d{3})(\d)/, '$1.$2')
-            .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-    };
-
-    const formatDate = (value: string): string => {
-        value = value.replace(/\D/g, '');
-        if (value.length > 8)
-            value = value.slice(0, 8);
-        if (value.length <= 8) {
-            value = value.replace(/(\d{2})(\d)/, '$1/$2');
-            value = value.replace(/(\d{2})(\d)/, '$1/$2');
-        }
-        return value.slice(0, 10);
-    };
-
-    const formatPhone = (value: string) => {
-        value = value.replace(/\D/g, '');
-        if (value.length > 11)
-            value = value.slice(0, 11);
-        if (value.length <= 11) {
-            value = value.replace(/(\d{2})(\d)/, '($1) $2');
-            value = value.replace(/(\d{5})(\d)/, '$1-$2');
-        }
-        return value.slice(0, 15);
-    };
-
-    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue('telefone', formatPhone(e.target.value));
-    };
-    const handleCpfChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue('cpf', formatCpf(e.target.value));
-    };
-    const handleDataChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue('data', formatDate(e.target.value));
-    };
-
     return (
         <div className="venda-form-input-div">
             <div className="input-venda-dados">
@@ -106,9 +65,8 @@ const FormFinanciamento = () => {
                 <h3>Seu telefone</h3>
                 <div className={errors.telefone ? "content-input-venda-error" : "content-input-venda "}>
                     <MdPhone className="icon-input-venda"/>
-                    <input type="text" className="input-venda-form-item" placeholder="Digite aqui..."
-                           {...register("telefone", {required: true})}
-                           onChange={handlePhoneChange}
+                    <IMaskInput mask="(00) 00000-0000" type="text" className="input-venda-form-item" placeholder="Digite aqui..."
+                           {...register("telefone", {required: true})} onAccept={(e) => setValue('telefone', e)}
                     />
                 </div>
                 {errors.telefone?.type === "required" &&
@@ -143,7 +101,7 @@ const FormFinanciamento = () => {
                 <h3>Seu CPF (Opcional)</h3>
                 <div className={errors.cpf ? "content-input-venda-error" : "content-input-venda "}>
                     <LuMail className="icon-input-venda"/>
-                    <input type="text" className="input-venda-form-item" placeholder="Digite aqui..."
+                    <IMaskInput type="text" className="input-venda-form-item" placeholder="Digite aqui..."
                            {...register("cpf",
                                {
                                    pattern: {
@@ -151,7 +109,7 @@ const FormFinanciamento = () => {
                                        message: 'invalido'
                                    }
                                })}
-                           onChange={handleCpfChange}
+                           onAccept={(e) => setValue('cpf', e)} mask="000.000.000-00"
                     />
                 </div>
                 {errors.cpf?.message === "invalido" &&
@@ -161,7 +119,7 @@ const FormFinanciamento = () => {
                 <h3>Data de nascimento (Opcional)</h3>
                 <div className={errors.data ? "content-input-venda-error" : "content-input-venda "}>
                     <LuMail className="icon-input-venda"/>
-                    <input type="text" className="input-venda-form-item" placeholder="Digite aqui..."
+                    <IMaskInput type="text" className="input-venda-form-item" placeholder="Digite aqui..."
                            {...register("data",
                                {
                                    pattern: {
@@ -169,7 +127,12 @@ const FormFinanciamento = () => {
                                        message: 'invalido'
                                    }
                                })}
-                           onChange={handleDataChange}
+                           onAccept={(e) => setValue('data', e)} mask="DD/MM/YYYY"
+                                blocks={{
+                                    DD: { mask: IMask.MaskedRange, from: 1, to: 31 },
+                                    MM: { mask: IMask.MaskedRange, from: 1, to: 12 },
+                                    YYYY: { mask: IMask.MaskedRange, from: 1900, to: 2099 }
+                                }}
                     />
                 </div>
                 {errors.data?.message === "invalido" &&
