@@ -7,6 +7,7 @@ import {MdPhone} from "react-icons/md";
 import {useForm} from "react-hook-form";
 import {usePostMail} from "../../hooks/usePostMail.tsx";
 import {useNavigate} from "react-router-dom";
+import {IMaskInput} from "react-imask";
 
 type FormData = {
     dados: string
@@ -35,21 +36,6 @@ const FormDadosClienteVenda = () => {
         navigate("/form-concluido")
     }
 
-    const formatPhone = (value: string) => {
-        value = value.replace(/\D/g, '');
-        if (value.length > 11)
-            value = value.slice(0, 11);
-        if (value.length <= 11) {
-            value = value.replace(/(\d{2})(\d)/, '($1) $2');
-            value = value.replace(/(\d{5})(\d)/, '$1-$2');
-        }
-        return value.slice(0, 15);
-    };
-
-    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue('telefone', formatPhone(e.target.value));
-    };
-
     return (
         <div className="venda-form-input-div">
             <div className="input-venda-dados">
@@ -74,9 +60,9 @@ const FormDadosClienteVenda = () => {
                 <h3>Seu telefone</h3>
                 <div className={errors.telefone ? "content-input-venda-error" : "content-input-venda "}>
                     <MdPhone className="icon-input-venda"/>
-                    <input type="text" className="input-venda-form-item" placeholder="Digite aqui..."
+                    <IMaskInput mask="(00) 00000-0000" type="text" className="input-venda-form-item" placeholder="Digite aqui..."
                            {...register("telefone", {required: true})}
-                           onChange={handlePhoneChange}
+                           onAccept={(e) => setValue('telefone', e)}
                     />
                 </div>
                 {errors.telefone?.type === "required" && <h4 className="input-venda-error-message">O Campo telefone é obrigatório.</h4>}
