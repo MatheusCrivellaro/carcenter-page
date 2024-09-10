@@ -25,8 +25,8 @@ const CardVeiculoPlacehoader = ({ quantidade }: props) => {
                     }}
                     key={i}
                 >
-                    <CPlaceholder animation="wave" style={{ background:  "#3F3F50", width: "100%", height: widthAtual > 992 ? "35vh" : "30vh", borderRadius: '8px 8px 0 0'}} />
-                    <CCardBody style={{background: "#282833", borderRadius: "0 0 8px 8px" }}>
+                    <CPlaceholder animation="wave" className="card-placehoader-img" style={{ width: "100%", height: widthAtual > 992 ? "35vh" : "30vh" }} />
+                    <CCardBody className="card-placehoader-body">
                         <CPlaceholder as={CCardTitle} animation="glow" xs={8}>
                             <CPlaceholder xs={6} style={{ background: "#fafafa"}}/>
                         </CPlaceholder>
@@ -37,7 +37,7 @@ const CardVeiculoPlacehoader = ({ quantidade }: props) => {
                             <CPlaceholder xs={6} style={{ background: "#71718a"}}/>
                             <CPlaceholder xs={8} style={{ background: "#71718a"}}/>
                         </CPlaceholder>
-                        <CPlaceholder as={CButton} style={{ height: "30px", width: "100%", background: "#71718a"}} xs={6}></CPlaceholder>
+                        <CPlaceholder className="card-placehoader-button" as={CButton} style={{ height: "30px", width: "100%" }} xs={6}></CPlaceholder>
                     </CCardBody>
                 </CCard>
             ))}

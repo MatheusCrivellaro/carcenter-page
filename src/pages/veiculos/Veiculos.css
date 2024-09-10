@@ -21,7 +21,7 @@
 .veiculos-filtro {
     min-height: 100vh;
     height: 100%;
-    border-right: var(--secondary-background-color) 1px solid;
+    border-right: var(--border-color) 1px solid;
     padding: 16px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .veiculos-filtro-div-preco-input {
-    border: #3F3F50 1px solid;
+    border: var(--border-color) 1px solid;
     border-radius: 8px;
     display: flex;
     margin-bottom: 8px;
@@ -71,7 +71,7 @@
 
 .veiculos-filtro-div-preco-input span {
     padding: 8px 8px 8px 12px;
-    border-right: #3F3F50 1px solid;
+    border-right: var(--border-color) 1px solid;
     margin-right: 8px;
     color: var(--text-color);
     font-size: 14px;
@@ -87,7 +87,7 @@
 }
 
 .veiculos-filtro-div-preco-input input::placeholder {
-    color: #71718a;
+    color: var(--placeholder-color);
     font-size: 14px;
     font-weight: 300;
 }

@@ -5,7 +5,7 @@
     justify-content: space-between;
     width: 100%;
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.6) 0 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 20px;
     transition: 0.4s;
 }
 
@@ -78,7 +78,7 @@
     width: 100%;
     text-align: center;
     padding: 4px;
-    background: #4f4f63;
+    background: var(--tertiary-background-color);
     border-radius: 8px;
     text-decoration: none;
     color: var(--text-color);
@@ -88,7 +88,7 @@
 }
 
 .button-card-veiculos-estoque:hover {
-    background: #3F3F50;
+    background: var(--tertiary-background-color-selected);
 }
 
 .img-logo-card-veiculo {

@@ -186,7 +186,7 @@
 .input-formulario-financiamento {
     margin-top: 8px;
     border-radius: 8px;
-    border: #4f4f63 solid 1px;
+    border: var(--border-color) solid 1px;
     background: var(--secondary-background-color);
     display: flex;
 }
@@ -200,7 +200,7 @@
 }
 
 .input-formulario-financiamento input::placeholder {
-    color: #71718a;
+    color: var(--border-color-selected);
 }
 
 .input-formulario-financiamento input:focus {
@@ -210,7 +210,7 @@
 .icon-input-formulario-financiamento {
     width: 48px;
     height: 100%;
-    color: #71718a;
+    color: var(--border-color-selected);
     padding: 8px;
 }
 

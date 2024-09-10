@@ -12,7 +12,7 @@ const SpinnerLoading = () => {
 
     return (
         <div className="spinner-loading">
-            <GridLoader className="spinner-loading-content" color="#dfab21" size={widthAtual > 992 ? 30 : 24} />
+            <GridLoader className="spinner-loading-content" color="#B81B1D" size={widthAtual > 992 ? 30 : 24} />
         </div>
     )
 }

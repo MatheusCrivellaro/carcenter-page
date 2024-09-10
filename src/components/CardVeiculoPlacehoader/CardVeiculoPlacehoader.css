@@ -1,1 +1,13 @@
+.card-placehoader-img {
+    background: var(--tertiary-background-color);
+    border-radius: 8px 8px 0 0;
+}
 
+.card-placehoader-body {
+    background: var(--secondary-background-color);
+    border-radius: 8px 8px 0 0;
+}
+
+.card-placehoader-button {
+    background: var(--tertiary-background-color);
+}

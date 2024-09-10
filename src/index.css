@@ -1,20 +1,34 @@
 :root {
     /*Cores*/
-    --background-color: #121217;
-    --secondary-background-color: #282833;
-    --secondary-background-color-selected: #3F3F50;
-    --contrast-color: #fafafa;
-    --contrast-color-selected: #fafafa;
-    --primary-color: #dfab21;
-    --primary-selected: #C28800;
+    --background-color: #fafafa;
+    --secondary-background-color: #ededed;
+    --secondary-background-color-selected: #dddddd;
+    --tertiary-background-color: #d5d5d5;
+    --tertiary-background-color-selected: #bdbdbd;
+    --contrast-color: #121217;
+    --contrast-color-selected: #282833;
+    --primary-color: #B81B1D;
+    --primary-selected: #A50015;
     --secondary-color: #9B9B9B;
-    --text-color: #fafafa;
+    --text-color: #121217;
+
+    --bg-nav: #121217;
+    --text-nav: #fafafa;
 
     --shadow-primary: rgb(223, 171, 33, 0.6) 0 0 10px;
     --shadow-white: rgb(250, 250, 250, 0.6) 0 0 10px;
 
-    --border-color: #474759;
+    --border-color: #dadada;
+    --border-color-selected: #71718a;
     --placeholder-color: #afb1c3;
+
+    --error-color: #91000a;
+    --error-color-selected: #c1000a;
+
+    --bg-button-carousel: rgba(18, 18, 23, 0.2);
+    --bg-categoria: #fafafa;
+    --bg-categoria-hover: #e6e6e6;
+    --text-color-categoria: #121217;
 
     /*Fontes*/
     --font-size-sm: 12px;
@@ -49,11 +63,11 @@
     background-color: var(--primary-selected);
 }
 
-.button-black {
-    background-color: var(--secondary-black);
+.button-background {
+    background-color: var(--secondary-background-color);
     transition: 0.2s;
 }
 
-.button-black:hover {
-    background-color: var(--secondary-black-selected);
+.button-background:hover {
+    background-color: var(--secondary-background-color-selected);
 }

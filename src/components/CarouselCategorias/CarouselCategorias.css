@@ -29,7 +29,7 @@
 
 .carousel-categorias-button button:hover {
     backdrop-filter: blur(3px);
-    background: rgba(18, 18, 23, 0.2);
+    background: var(--bg-button-carousel);
 }
 
 .carousel-categorias-button-next {

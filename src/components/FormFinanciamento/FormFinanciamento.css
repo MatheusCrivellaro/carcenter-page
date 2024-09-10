@@ -10,14 +10,14 @@
 }
 
 .input-venda-dados p {
-    color: #6C6C89;
+    color: var(--border-color-selected);
     font-size: 14px;
     font-weight: 400;
     margin: 0;
 }
 
 .input-venda-error-message {
-    color: #91000a;
+    color: var(--error-color);
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 12px;
@@ -69,7 +69,7 @@
     margin: 8px 0;
     align-items: center;
     border-radius: 8px;
-    border: 1px solid #4f4f63;
+    border: 1px solid var(--border-color);
     background: var(--secondary-background-color);
     width: 100%;
     transition: 0.1s;
@@ -80,18 +80,18 @@
     margin: 8px 0;
     align-items: center;
     border-radius: 8px;
-    border: 1px solid #91000a;
+    border: 1px solid var(--error-color);
     background: var(--secondary-background-color);
     width: 100%;
     transition: 0.1s;
 }
 
 .content-input-venda:hover {
-    border: 1px solid #71718a;
+    border: 1px solid var(--border-color-selected);
 }
 
 .content-input-venda-error:hover {
-    border: 1px solid #c1000a;
+    border: 1px solid var(--error-color-selected);
 }
 
 .input-venda-form-item {
@@ -113,7 +113,7 @@
 }
 
 .icon-input-venda {
-    color: #71718a;
+    color: var(--border-color-selected);
     font-size: 22px;
     margin: 0 8px;
 }
@@ -131,7 +131,7 @@
 }
 
 .button-submit-form-venda:hover {
-    background: #3F3F50;
+    background: var(--secondary-background-color);
 }
 
 .icon-button-submit-form-venda {

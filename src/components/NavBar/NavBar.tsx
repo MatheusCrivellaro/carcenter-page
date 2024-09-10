@@ -33,7 +33,7 @@ const NavBar = () => {
             <div className={isSticky ? "suspense-nav" : ""}>
                 <nav>
                     <div className="title-div-nav">
-                        <img src="https://static.autoconf.com.br/site-car-center-912/build/logo.png" alt="" />
+                        <img src="/logo.png" alt="" />
                     </div>
                     <div className='optionals-div-nav'>
                         <NavLink
@@ -91,32 +91,17 @@ const NavBar = () => {
                             <motion.div
                                 animate={isOpenOptions ? { rotate: 45, y: 0 } : { rotate: 0, y: -10 }}
                                 transition={{ duration: 0.2 }}
-                                style={{
-                                    width: '30px',
-                                    height: '3px',
-                                    backgroundColor: '#dfab21',
-                                    position: 'absolute',
-                                }}
+                                className="button-open-options-linha"
                             />
                             <motion.div
                                 animate={isOpenOptions ? { opacity: 0 } : { opacity: 1 }}
                                 transition={{ duration: 0.2 }}
-                                style={{
-                                    width: '30px',
-                                    height: '3px',
-                                    backgroundColor: '#dfab21',
-                                    position: 'absolute',
-                                }}
+                                className="button-open-options-linha"
                             />
                             <motion.div
                                 animate={isOpenOptions ? { rotate: -45, y: 0 } : { rotate: 0, y: 10 }}
                                 transition={{ duration: 0.2 }}
-                                style={{
-                                    width: '30px',
-                                    height: '3px',
-                                    backgroundColor: '#dfab21',
-                                    position: 'absolute',
-                                }}
+                                className="button-open-options-linha"
                             />
                         </div>
                     </div>

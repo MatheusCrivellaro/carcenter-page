@@ -24,10 +24,6 @@
     color: var(--text-color);
 }
 
-.title-card-passo-financiamento-pronto {
-    color: #3bdc01;
-}
-
 .passos-financiamento-card h2 {
     text-align: center;
     font-size: 16px;

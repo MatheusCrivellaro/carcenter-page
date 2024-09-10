@@ -6,11 +6,11 @@
     padding: 8px;
     flex: none;
     transition: 0.2s;
-    background: var(--contrast-color);
+    background: var(--bg-categoria);
 }
 
 .categorias-card-inicio:hover {
-    box-shadow: rgba(255,255,255, 1) 0 0 10px ;
+    background: var(--bg-categoria-hover);
 }
 
 .categorias-card-inicio img {
@@ -20,7 +20,7 @@
 .title-card-categoria {
     font-size: 16px;
     height: 30%;
-    color: var(--background-color);
+    color: var(--text-color-categoria);
 }
 
 .div-itens-card-categoria {

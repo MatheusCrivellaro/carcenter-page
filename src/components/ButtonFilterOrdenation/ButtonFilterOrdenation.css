@@ -38,7 +38,7 @@
 }
 
 .button-ordenar:hover {
-    background-color: #3F3F50;
+    background-color: var(--secondary-background-color-selected);
 }
 
 .button-ordenar-menu {

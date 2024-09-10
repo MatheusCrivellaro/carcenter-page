@@ -229,7 +229,7 @@ const Veiculos = () => {
                                 }
                                 <span>Filtrar</span>
                             </button>
-                            <ButtonFilterOrdenation handle={setOrdenation} classeButton="button-black"/>
+                            <ButtonFilterOrdenation handle={setOrdenation} classeButton="button-background"/>
                         </div>
                     </div>
                     <h1 className="veiculos-cards-encontrados"><span>{filteredVehicles.length}</span>veículos encontrados</h1>

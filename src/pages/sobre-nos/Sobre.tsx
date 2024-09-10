@@ -18,11 +18,11 @@ const Sobre = () => {
             <ButtonSuspense />
             <h1>Sobre nós</h1>
             <p>
-                A <span>CAR CENTER MULTIMARCAS</span> está no mercado de vendas de veículos desde o ano de 2001, sempre ajudando seus
-                clientes a realizar seus sonhos. Para isso, contamos com uma equipe especializada na avaliação, compra e
-                venda de automóveis e isso garante um veiculo com menor preço, melhor avaliação do seu usado na troca,
-                as melhores taxas e condições de pagamento. Venha conhecer nossa loja e realizar seu sonho com a gente,
-                estamos localizado na Cidade de Osasco. Aguardamos sua visita!
+                A <span>Start Garage</span> está pronta para ajudar você a encontrar o veículo dos seus sonhos, seja qual for a marca, dentro das melhores condições de pagamento.
+
+                Intermediamos ainda serviços adicionais, como despachante, seguro do seu automóvel, financiamento com todas as maiores e melhores financeiras do Brasil, tudo para que você troque seu veículo com todo conforto, comodidade e segurança.
+
+                Atualmente somos referencia no mercado de automóveis, trazendo o conceito de concessionária para o mercado multimarcas.
             </p>
             <div className="container-images-sobre-nos">
                 <img src="https://static.autoconf.com.br/site-car-center-912/build/imagem-1.webp" alt="" />
@@ -33,7 +33,7 @@ const Sobre = () => {
             <div className="informations-sobre-nos">
                 <div className="informations-sobre-nos-logo">
                     <div className="informations-sobre-nos-logo-container">
-                        <img src="https://static.autoconf.com.br/site-car-center-912/build/logo.png" alt=""
+                        <img src="/logo.png" alt=""
                             className="img-atendimento-sobre-nos" />
                         <h2>
                             Vendemos e compramos carros seminovos com transparência, segurança e o conforto que você merece.
